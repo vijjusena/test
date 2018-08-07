@@ -1,0 +1,5346 @@
+
+{
+  "swagger" : "2.0",
+  "info" : {
+    "description" : "",
+    "version" : "1.0",
+    "title" : "",
+    "termsOfService" : ""
+  },
+  "host" : "sgrest-stag.evergent.com",
+  "basePath" : "/",
+  "tags" : [ {
+    "name" : "ev"
+  } ],
+  "schemes" : [ "https" ],
+  "paths" : {
+    "/ev/addSubscriptions" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "addSubscriptions",
+        "description" : "addSubscriptions() REST API is used to place one or multiple subscriptions to the customer along with payment/coupon information.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "AddSubscriptionRequest",
+          "description" : "AddSubscriptionRequest",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/AddSubscriptionRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/AddSubscriptionsResponse"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/AddSubscriptionsResponse"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/AddSubscriptionsResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ev/addTVODOrder" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "addTVODOrder",
+        "description" : "addTVODOrder() REST API place an order for VOD products to the customer.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "AddTVODOrderRequest",
+          "description" : "AddTVODOrderRequest",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/AddTVODOrderRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/AddTVODOrderResponse"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/AddTVODOrderResponse"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/AddTVODOrderResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ev/applyCoupon" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "applyCoupon",
+        "description" : "applycoupon() REST API is used to apply the coupon based on coupon code, defined for product/package.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "ApplyCouponRequest",
+          "description" : "ApplyCouponRequest",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/ApplyCouponRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/ApplyCouponResponse"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/ApplyCouponResponse"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/ApplyCouponResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ev/authenticateCustomer" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "authenticateCustomer",
+        "description" : "authenticateCustomer() REST API is used to authenticate the customer along with concurrent session limit and No. of Allowed devices, if the details are provided.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "AuthenticateCustomerRequest",
+          "description" : "AuthenticateCustomerRequest",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/AuthenticateCustomerRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/AuthenticateCustomerResponseMessage"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/AuthenticateCustomerResponseMessage"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/AuthenticateCustomerResponseMessage"
+            }
+          }
+        }
+      }
+    },
+    "/ev/changePassword" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "changePassword",
+        "description" : "changePassword() REST API is used to change the password of an account in Evergent system.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "ChangePasswordRequest",
+          "description" : "ChangePasswordRequest",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/ChangePasswordRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/ChangePasswordResponse"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/ChangePasswordResponse"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/ChangePasswordResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ev/changeService" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "changeService",
+        "description" : "changeService () REST API is used to upgrade or downgrade the existing service of the customer.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "ChangeServiceRequest",
+          "description" : "ChangeServiceRequest",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/ChangeServiceRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/ChangeServiceResponse"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/ChangeServiceResponse"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/ChangeServiceResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ev/checkCredentials" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "checkCredentials",
+        "description" : "checkCredentials() REST API is used to get the contact details of an account in Evergent system.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "CheckCredentialsRequest",
+          "description" : "CheckCredentialsRequest",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/CheckCredentialsRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/CheckCredentialsResponse"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/CheckCredentialsResponse"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/CheckCredentialsResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ev/checkPIN" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "checkPIN",
+        "description" : "checkPIN() REST API is used to validate the PIN that is set to the account.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "CheckPINRequest",
+          "description" : "CheckPINRequest",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/CheckPINRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/CheckPINResponse"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/CheckPINResponse"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/CheckPINResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ev/createUser" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "createUser",
+        "description" : "createUser() REST API is used to create an account in Evergent system.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "CreateUserRequest",
+          "description" : "CreateUserRequest",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/CreateUserRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/CreateUserResponse"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/CreateUserResponse"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/CreateUserResponse"
+            }
+          },
+          "20001" : {
+            "description" : "Generic Failure"
+          },
+          "20003" : {
+            "description" : "Missing Required Parameters"
+          },
+          "20224" : {
+            "description" : "Account with the given CustomerID already exists"
+          },
+          "20259" : {
+            "description" : "Password length should not exceed 100"
+          },
+          "20292" : {
+            "description" : "Account with the given Details already exists"
+          },
+          "20293" : {
+            "description" : "Offer is already active on your Number, valid till given Endate"
+          },
+          "20295" : {
+            "description" : "Invalid email"
+          },
+          "20297" : {
+            "description" : "User ID should not exceed 100 characters"
+          },
+          "20359" : {
+            "description" : "Password length should be minimum 4"
+          },
+          "20360" : {
+            "description" : "UserID length should be minimum 4"
+          },
+          "20361" : {
+            "description" : "Invalid Service Id"
+          },
+          "20371" : {
+            "description" : "Account already exists with"
+          },
+          "20383" : {
+            "description" : "User Name - Spaces are not allowed"
+          },
+          "20999" : {
+            "description" : "Request data malformed"
+          }
+        }
+      }
+    },
+    "/ev/forgotContactPassword" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "forgotContactPassword",
+        "description" : "forgotContactPassword() REST API is used to reset the contact password of the customer. If this api is executed customer will be notified with a mail containing reset password link.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "ForgotContactPasswordRequestMessage",
+          "description" : "ForgotContactPasswordRequestMessage",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/ForgotContactPasswordRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/ForgotContactPasswordResponseMessage"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/ForgotContactPasswordResponseMessage"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/ForgotContactPasswordResponseMessage"
+            }
+          }
+        }
+      }
+    },
+    "/ev/getAccountDevices" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "getAccountDevices",
+        "description" : "getAccountDevices() REST API is used to get the active subscriptions of an account in Evergent system.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "GetAccountDevicesRequest",
+          "description" : "GetAccountDevicesRequest",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/GetAccountDevicesRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/GetAccountDevicesResponse"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/GetAccountDevicesResponse"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/GetAccountDevicesResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ev/getAcctPairedCouponCodes" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "getAcctPairedCouponCodes",
+        "description" : "getAccountPairedCouponCodes() REST API is used to fetch coupon details for the Customer Account.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "GetAccountPairedCouponCodesRequestMessage",
+          "description" : "GetAccountPairedCouponCodesRequestMessage",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/GetAccountPairedCouponCodesRequestMessage"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/GetAccountPairedCouponCodesResponseMessage"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/GetAccountPairedCouponCodesResponseMessage"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/GetAccountPairedCouponCodesResponseMessage"
+            }
+          }
+        }
+      }
+    },
+    "/ev/getActiveSubscriptions" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "getActiveSubscription",
+        "description" : "getActiveSubscriptions() REST API is used to get the active subscriptions of an account in Evergent system.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "GetActiveSubscriptionsRequest",
+          "description" : "GetActiveSubscriptionsRequest",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/GetActiveSubscriptionRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/GetActiveSubscriptionResponse"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/GetActiveSubscriptionResponse"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/GetActiveSubscriptionResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ev/getContact" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "getContact",
+        "description" : "getContact() REST API is used to get all the available contact details of the customer.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "GetContactRequest",
+          "description" : "GetContactRequest",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/GetContactRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/GetContactResponse"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/GetContactResponse"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/GetContactResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ev/getOrderDetails" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "getOrderDetails",
+        "description" : "getOrderDetails() REST API fetches the details of the order. I.e. productName, nextPaymentDate, promotionEndDate, promotionType, promotionPeriod, promotionDuration, PromotionId.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "GetOrderDetailsRequestMessage",
+          "description" : "GetOrderDetailsRequestMessage",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/GetOrderDetailsRequestMessage"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/GetOrderDetailsResponseMessage"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/GetOrderDetailsResponseMessage"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/GetOrderDetailsResponseMessage"
+            }
+          }
+        }
+      }
+    },
+    "/ev/getPaymentMethods" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "getPaymentMethods",
+        "description" : "getPaymentMethods() REST API is used to fetch i.e., return the available payment method information of the customer.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "GetPaymentMethodsRequestMessage",
+          "description" : "GetPaymentMethodsRequestMessage",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/GetPaymentMethodsRequestMessage"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/GetPaymentMethodsResponse"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/GetPaymentMethodsResponse"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/GetPaymentMethodsResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ev/getPayments" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "getPayments",
+        "description" : "getPayments() REST API is used to get all posted, pending and declined payments for the account in Evergent system.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "GetPaymentsRequest",
+          "description" : "GetPaymentsRequest",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/GetPaymentsRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/GetPaymentsResponse"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/GetPaymentsResponse"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/GetPaymentsResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ev/getPriceCharge" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "getPriceCharge",
+        "description" : "getPriceCharge() REST API is used to get the price charged while updating/downgrading the service for the account or not.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "GetPriceChargedRequest",
+          "description" : "GetPriceChargedRequest",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/GetPriceChargedRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/GetPriceChargedResponse"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/GetPriceChargedResponse"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/GetPriceChargedResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ev/getProducts " : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "addContact",
+        "description" : "getProducts() REST API is used to get the products list available to that DMA.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "GetProductsRequest",
+          "description" : "GetProductsRequest",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/GetProductsRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/GetProductsResponse"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/GetProductsResponse"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/GetProductsResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ev/getSubscriptionHistory" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "getSubscriptionHistory",
+        "description" : "getSubscriptionHistory() REST API is used to fetch all the products which are expired .",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "GetSubscriptionHistoryRequest",
+          "description" : "GetSubscriptionHistoryRequest",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/GetSubscriptionHistoryRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/GetSubscriptionHistoryResponse"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/GetSubscriptionHistoryResponse"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/GetSubscriptionHistoryResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ev/getVoucherDetails" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "getVoucherDetails",
+        "description" : "getVoucherDetails() REST API fetches the details of the coupon. I.e. Expiry date, start date, validity of the coupon, Product details linked to the coupon and the promotions defined to the coupon.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "GetVoucherDetailsRequestMessage",
+          "description" : "GetVoucherDetailsRequestMessage",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/GetVoucherDetailsRequestMessage"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/GetVoucherDetailsResponseMessage"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/GetVoucherDetailsResponseMessage"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/GetVoucherDetailsResponseMessage"
+            }
+          }
+        }
+      }
+    },
+    "/ev/isCustomerEligibleForFreeTrial" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "isCustomerEligibleForFreeTrial",
+        "description" : "isCustomerEligibleForFreeTrial() REST API is verify whether the customer is eligible for free trial for the account or not.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "FreeTrialRequest",
+          "description" : "FreeTrialRequest",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/FreeTrialRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/FreeTrialResponse"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/FreeTrialResponse"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/FreeTrialResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ev/isValidCoupon" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "isValidCoupon",
+        "description" : "isValidCoupon () REST API is used to verify whether the coupon is valid or not.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "ValidCouponRequest",
+          "description" : "ValidCouponRequest",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/ValidCouponRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/ValidCouponResponse"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/ValidCouponResponse"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/ValidCouponResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ev/pairCustomer" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "pairCustomer",
+        "description" : "pairCustomer() REST API is used to pair coupon details for the existing Customer Account.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "AccountPairedVoucherCodesRequest",
+          "description" : "AccountPairedVoucherCodesRequest",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/AccountPairedVoucherCodesRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/AccountPairedVoucherCodesResponse"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/AccountPairedVoucherCodesResponse"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/AccountPairedVoucherCodesResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ev/pauseSubscription" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "pauseSubscription",
+        "description" : "pauseSubscription() REST API is used to pause the subscription of the Customer.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "PauseSubscriptionRequestMessage",
+          "description" : "PauseSubscriptionRequestMessage",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/PauseSubscriptionRequestMessage"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/PauseSubscriptionResponseMessage"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/PauseSubscriptionResponseMessage"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/PauseSubscriptionResponseMessage"
+            }
+          }
+        }
+      }
+    },
+    "/ev/reactivateService" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "reactivateService",
+        "description" : "reactivateService () REST API is used to reactivate the canceled service of the customer.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "ReactivateServiceRequest",
+          "description" : "ReactivateServiceRequest",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/ReactivateServiceRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/ReactivateServiceResponse"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/ReactivateServiceResponse"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/ReactivateServiceResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ev/recordPlayTime" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "recordPlayTime",
+        "description" : "recordPlayTime() REST API is used to change the validity of the VOD once viewing of the video is started for the time which is set to the video.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "RecordPlayTimeRequest",
+          "description" : "RecordPlayTimeRequest",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/RecordPlayTimeRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/RecordPlayTimeResponse"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/RecordPlayTimeResponse"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/RecordPlayTimeResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ev/redeemCoupon" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "redeemCoupon",
+        "description" : "redeemCoupon() REST API is used to redeem a voucher on existing order for the account.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "RedeemCouponRequest",
+          "description" : "RedeemCouponRequest",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/RedeemCouponRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/RedeemCouponResponse"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/RedeemCouponResponse"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/RedeemCouponResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ev/removeDeviceForAccount" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "removeDeviceForAccount",
+        "description" : "rremoveDeviceForAccount() REST API is used to remove the existing device for the Customer Account.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "RemoveDeviceRequest",
+          "description" : "RemoveDeviceRequest",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/RemoveDeviceRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/RemoveDeviceResponse"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/RemoveDeviceResponse"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/RemoveDeviceResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ev/removeSubscription" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "removeSubscription",
+        "description" : "removeSubscription () REST API removes a subscription to the customer.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "RemoveSubscriptionRequest",
+          "description" : "RemoveSubscriptionRequest",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/RemoveSubscriptionRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/RemoveSubscriptionResponse"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/RemoveSubscriptionResponse"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/RemoveSubscriptionResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ev/resetPassword" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "resetPassword",
+        "description" : "resetPassword() REST API is used to reset the password for the account in Evergent system.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "ResetPasswordRequest",
+          "description" : "ResetPasswordRequest",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/ResetPasswordRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/ResetPasswordResponse"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/ResetPasswordResponse"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/ResetPasswordResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ev/sendEmail" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "sendEmail",
+        "description" : "sendEmail() REST API is used to send an email to the customer based on the template defined.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "SendEmailRequest",
+          "description" : "SendEmailRequest",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/SendEmailRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/SendEmailResponse"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/SendEmailResponse"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/SendEmailResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ev/updateParentalControlDetails" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "updateParentalControlDetails",
+        "description" : "updateParentalControlDetails() REST API is used to update parental control details to the account.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "UpdateParentalControlDetailsRequestMesssage",
+          "description" : "UpdateParentalControlDetailsRequestMesssage",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/UpdateParentalControlDetailsRequestMesssage"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/UpdateParentalControlDetailsResponseMessage"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/UpdateParentalControlDetailsResponseMessage"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/UpdateParentalControlDetailsResponseMessage"
+            }
+          }
+        }
+      }
+    },
+    "/ev/updatePaymentInfo" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "updatePaymentInfo",
+        "description" : "updatePaymentInfo() REST API is used to add/ edit the new/existing payment method information of the user.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "UpdatePaymentInfoRequest",
+          "description" : "UpdatePaymentInfoRequest",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/UpdatePaymentInfoRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/UpdatePaymentInfoResponse"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/UpdatePaymentInfoResponse"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/UpdatePaymentInfoResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ev/updatePin" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "updatePin",
+        "description" : "updatePin() REST API is used to update the contact PIN for the account.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "UpdatePinRequest",
+          "description" : "UpdatePinRequest",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/UpdatePinRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/UpdatePinResponse"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/UpdatePinResponse"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/UpdatePinResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ev/updateProfile" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "updateProfile",
+        "description" : "updateProfile() REST API is used to update//edit the existing user/contact information of the customer like firstName, lastName, email etc.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "UpdateProfileRequestMessage",
+          "description" : "UpdateProfileRequestMessage",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/UpdateProfileRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/UpdateProfileResponse"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/UpdateProfileResponse"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/UpdateProfileResponse"
+            }
+          }
+        }
+      }
+    },
+    "/ev/validateToken" : {
+      "post" : {
+        "tags" : [ "ev" ],
+        "summary" : "validateToken",
+        "description" : "validateToken() REST API is used to validate the token of the customer.",
+        "operationId" : "routingRequest",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "in" : "body",
+          "name" : "ValidateTokenRequest",
+          "description" : "ValidateTokenRequest",
+          "required" : true,
+          "schema" : {
+            "$ref" : "#/definitions/ValidateTokenRequest"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "schema" : {
+              "$ref" : "#/definitions/ValidateTokenResponse"
+            }
+          },
+          "1" : {
+            "description" : "Success",
+            "schema" : {
+              "$ref" : "#/definitions/ValidateTokenResponse"
+            }
+          },
+          "default" : {
+            "description" : "Error",
+            "schema" : {
+              "$ref" : "#/definitions/ValidateTokenResponse"
+            }
+          }
+        }
+      }
+    }
+  },
+  "securityDefinitions" : {
+    "basicAuth" : {
+      "type" : "basic"
+    }
+  },
+  "definitions" : {
+    "GetProductsRequest" : {
+      "type" : "object",
+      "required" : [ "GetProductsRequestMessage" ],
+      "properties" : {
+        "GetProductsRequestMessage" : {
+          "description" : "Object to encapsulate getProducts  request",
+          "$ref" : "#/definitions/GetProductsRequestMessage"
+        }
+      },
+      "description" : "Object to encapsulate getProducts  request"
+    },
+    "GetPriceChargedRequestMessage" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "newSku", "oldSku", "sessionToken" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "sessionToken" : {
+          "type" : "string",
+          "description" : "A unique token generated for the account on successful authentication."
+        },
+        "oldSku" : {
+          "type" : "string",
+          "description" : "Old service id of the customer that is already purchased."
+        },
+        "newSku" : {
+          "type" : "string",
+          "description" : "New service id that is going to be purchased by the customer."
+        }
+      },
+      "description" : "Object to encapsulate getPriceCharge request"
+    },
+    "RemoveDeviceRequest" : {
+      "type" : "object",
+      "required" : [ "RemoveDeviceReqMessage" ],
+      "properties" : {
+        "RemoveDeviceReqMessage" : {
+          "description" : "Object to encapsulate RemoveDevice request",
+          "$ref" : "#/definitions/RemoveDeviceReqMessage"
+        }
+      },
+      "description" : "Object to encapsulate RemoveDevice request"
+    },
+    "GetAccountDevicesRequest" : {
+      "type" : "object",
+      "required" : [ "GetAccountDevicesRequestMessage" ],
+      "properties" : {
+        "GetAccountDevicesRequestMessage" : {
+          "description" : "Object to encapsulate getAccountDevices request",
+          "$ref" : "#/definitions/GetAccountDevicesRequestMessage"
+        }
+      },
+      "description" : "Object to encapsulate getAccountDevices request"
+    },
+    "AddSubscriptionRequest" : {
+      "type" : "object",
+      "required" : [ "AddSubscriptionRequestMessage" ],
+      "properties" : {
+        "AddSubscriptionRequestMessage" : {
+          "description" : "Object to encapsulate addSubscription request",
+          "$ref" : "#/definitions/AddSubscriptionRequestMessage"
+        }
+      },
+      "description" : "Object to encapsulate addSubscription request"
+    },
+    "RemoveDeviceResponseMessage" : {
+      "type" : "object",
+      "required" : [ "failureMessage", "responseCode", "status" ],
+      "properties" : {
+        "status" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        },
+        "message" : {
+          "type" : "string",
+          "description" : "Indicates whether the device is removed successfully or not."
+        }
+      },
+      "description" : "Response of the RemoveDevice Api"
+    },
+    "GetAccountDevicesRequestMessage" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "sessionToken" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "sessionToken" : {
+          "type" : "string",
+          "description" : "A unique token generated for the account on successful authentication."
+        }
+      },
+      "description" : "Object to encapsulate getAccountDevices request"
+    },
+    "RemoveSubscriptionRespMessage" : {
+      "type" : "object",
+      "required" : [ "failureMessage", "message", "responseCode" ],
+      "properties" : {
+        "message" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        }
+      },
+      "description" : "Response of the removeSubscription Api"
+    },
+    "UpdateParentalControlDetailsResponse" : {
+      "type" : "object",
+      "required" : [ "failureMessage", "responseCode", "status" ],
+      "properties" : {
+        "status" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        },
+        "message" : {
+          "type" : "string",
+          "description" : "Indicates whether the Parental Control Details is updated successfully or not."
+        }
+      },
+      "description" : "Response of the updateParentalControlDetails Api"
+    },
+    "ValidateTokenResponse" : {
+      "type" : "object",
+      "required" : [ "ValidateTokenResponseMessage" ],
+      "properties" : {
+        "ValidateTokenResponseMessage" : {
+          "description" : "Object to encapsulate validateToken response",
+          "$ref" : "#/definitions/ValidateTokenResponseMessage"
+        }
+      },
+      "description" : "Object to encapsulate validateToken response"
+    },
+    "GetAccountPairedCouponCodesResponse" : {
+      "type" : "object",
+      "required" : [ "AcctPairedCouponCodes", "failureMessage", "message", "responseCode" ],
+      "properties" : {
+        "message" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "AcctPairedCouponCodes" : {
+          "description" : "Details of Account Paired Coupon Codes",
+          "$ref" : "#/definitions/AcctPairedCouponCodes"
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        }
+      },
+      "description" : "Response of the getAcctPairedCouponCodes Api"
+    },
+    "GetContactResponseMessage" : {
+      "type" : "object",
+      "required" : [ "concurrentPlayLimit", "contactMessage", "cpCustomerID", "failureMessage", "message", "responseCode", "spAccountID", "verificationStatus" ],
+      "properties" : {
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "message" : {
+          "type" : "string"
+        },
+        "spAccountID" : {
+          "type" : "string",
+          "description" : "A unique identifier of the account "
+        },
+        "cpCustomerID" : {
+          "type" : "string",
+          "description" : "A unique identifier of the account in Partner systems. This can be used for reconciliation purposes"
+        },
+        "concurrentPlayLimit" : {
+          "type" : "number",
+          "description" : "No.of users can watch at a Time"
+        },
+        "verificationStatus" : {
+          "type" : "boolean",
+          "description" : "verification Status of the account"
+        },
+        "contactMessage" : {
+          "type" : "array",
+          "description" : "Contains the contact details like username, email etc.",
+          "items" : {
+            "$ref" : "#/definitions/ContactMsg"
+          }
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        }
+      },
+      "description" : "Response of the getContact Api"
+    },
+    "GetOrderDetailsResponseMessage" : {
+      "type" : "object",
+      "required" : [ "GetOrderDetailsResponse" ],
+      "properties" : {
+        "GetOrderDetailsResponse" : {
+          "description" : "Object to encapsulate getOrderDetails response",
+          "$ref" : "#/definitions/GetOrderDetailsResponse"
+        }
+      },
+      "description" : "Object to encapsulate getOrderDetails response"
+    },
+    "GetProductsResponse" : {
+      "type" : "object",
+      "required" : [ "GetProductsResponseMessage" ],
+      "properties" : {
+        "GetProductsResponseMessage" : {
+          "description" : "Object to encapsulate getProducts response",
+          "$ref" : "#/definitions/GetProductsResponseMessage"
+        }
+      },
+      "description" : "Object to encapsulate getProducts response"
+    },
+    "PromotionsMsg" : {
+      "type" : "object",
+      "required" : [ "endDate", "isFreeTrail", "isVODPromotion", "promotionId", "promotionName", "startDate" ],
+      "properties" : {
+        "promotionId" : {
+          "type" : "string",
+          "description" : "Promotion id that is linked to the ordered product"
+        },
+        "promotionName" : {
+          "type" : "string",
+          "description" : "Name of the promotion"
+        },
+        "startDate" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "Start date of the promotion"
+        },
+        "endDate" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "End date of the promotion"
+        },
+        "isVODPromotion" : {
+          "type" : "boolean",
+          "description" : "Define whether the promotion is VOD or not"
+        },
+        "isFreeTrail" : {
+          "type" : "boolean",
+          "description" : "Indicates whether the promotion is free trial or not"
+        }
+      },
+      "description" : "PromotionsMsg"
+    },
+    "GetPaymentsResponseMessage" : {
+      "type" : "object",
+      "required" : [ "AccountPayments", "failureMessage", "message", "responseCode" ],
+      "properties" : {
+        "message" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        },
+        "AccountPayments" : {
+          "type" : "array",
+          "description" : "Account Payment Info Msg",
+          "items" : {
+            "$ref" : "#/definitions/AccountPaymentsInfo"
+          }
+        }
+      },
+      "description" : "Response of the getPayments Api"
+    },
+    "RemoveSubscriptionReqMessage" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "endDate", "serviceID", "serviceType", "sessionToken" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "sessionToken" : {
+          "type" : "string",
+          "description" : "A unique token generated for the account on successful authentication."
+        },
+        "serviceID" : {
+          "type" : "string",
+          "example" : "monthly_india",
+          "description" : "SKU/ Quick code of the product in Evergent System."
+        },
+        "serviceType" : {
+          "type" : "string",
+          "example" : "PRODUCT",
+          "description" : "Product/Package "
+        },
+        "endDate" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "End date of the Subscription in Millis."
+        }
+      },
+      "description" : "Object to encapsulate removeSubscription request"
+    },
+    "PackageItemsInfo" : {
+      "type" : "object",
+      "required" : [ "serviceID", "serviceName" ],
+      "properties" : {
+        "serviceID" : {
+          "type" : "string",
+          "description" : "SKU/Quick code of the service "
+        },
+        "serviceName" : {
+          "type" : "string",
+          "description" : "Service Name of the Product/ Package "
+        }
+      },
+      "description" : "Package Items  Info"
+    },
+    "AccountPairedVoucherCodesResponseMessage" : {
+      "type" : "object",
+      "required" : [ "failureMessage", "responseCode", "status" ],
+      "properties" : {
+        "status" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        },
+        "message" : {
+          "type" : "string",
+          "description" : "Indicates whether the customer's coupon details are paired successfully or not."
+        }
+      },
+      "description" : "Response of the pairCustomer Api"
+    },
+    "SendEmailRequestMessage" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "email", "emailTemplate", "parameterMesgs", "sessionToken" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "sessionToken" : {
+          "type" : "string",
+          "description" : "A unique token generated for the account on successful authentication."
+        },
+        "email" : {
+          "type" : "string",
+          "description" : "Customer’s registered primary email id."
+        },
+        "emailTemplate" : {
+          "type" : "string",
+          "description" : "Name of the email template in which the email has to be sent."
+        },
+        "parameterMesgs" : {
+          "type" : "array",
+          "description" : "Email template localization parameters information message",
+          "items" : {
+            "$ref" : "#/definitions/parameterMesgs"
+          }
+        }
+      },
+      "description" : "Object to encapsulate sendEmail request"
+    },
+    "ResetPasswordRequest" : {
+      "type" : "object",
+      "required" : [ "ResetPasswordRequestMessage" ],
+      "properties" : {
+        "ResetPasswordRequestMessage" : {
+          "description" : "Object to encapsulate resetPassword request",
+          "$ref" : "#/definitions/ResetPasswordRequestMessage"
+        }
+      },
+      "description" : "Object to encapsulate resetPassword request"
+    },
+    "RedeemCouponRequest" : {
+      "type" : "object",
+      "required" : [ "RedeemCouponRequestMessage" ],
+      "properties" : {
+        "RedeemCouponRequestMessage" : {
+          "description" : "Object to encapsulate redeemCoupon request",
+          "$ref" : "#/definitions/RedeemCouponRequestMessage"
+        }
+      },
+      "description" : "Object to encapsulate redeemCoupon request"
+    },
+    "AuthenticateCustomerReqMessage" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "contactPassword", "contactUserName", "deviceDetails" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "contactUserName" : {
+          "type" : "string",
+          "description" : "Unique userName i.e., email of the contact"
+        },
+        "contactPassword" : {
+          "type" : "string",
+          "description" : "password of the contact"
+        },
+        "deviceDetails" : {
+          "description" : "Details of Device",
+          "$ref" : "#/definitions/DeviceDetailsMessage"
+        }
+      },
+      "description" : "Object to encapsulate authenticateCustomer request"
+    },
+    "GetPaymentMethodsResponse" : {
+      "type" : "object",
+      "required" : [ "GetPaymentMethodsResponseMessage" ],
+      "properties" : {
+        "GetPaymentMethodsResponseMessage" : {
+          "description" : "Object to encapsulate getPaymentMethods response",
+          "$ref" : "#/definitions/GetPaymentMethodsResponseMessage"
+        }
+      },
+      "description" : "Object to encapsulate getPaymentMethods response"
+    },
+    "UpdateProfileResponseMessage" : {
+      "type" : "object",
+      "required" : [ "failureMessage", "responseCode", "status" ],
+      "properties" : {
+        "status" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        },
+        "message" : {
+          "type" : "string",
+          "description" : "Indicates whether the contact updated successfully or not"
+        }
+      },
+      "description" : "Response of the updateProfile Api"
+    },
+    "PauseSubscriptionRequest" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "cpCustomerID", "dmaID", "endDate", "sku", "startDate" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "cpCustomerID" : {
+          "type" : "string",
+          "description" : "A unique ID of the account in EV systems"
+        },
+        "startDate" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "Start date of the Subscription."
+        },
+        "endDate" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "End date of the Subscription."
+        },
+        "sku" : {
+          "type" : "string",
+          "description" : "Sku of the product or package"
+        },
+        "dmaID" : {
+          "type" : "string",
+          "description" : "Unique designated market area ID of the channel partner"
+        }
+      },
+      "description" : "Object to encapsulate pauseSubscription request"
+    },
+    "ApplyCouponRequestMessage" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "cpCustomerID", "packageID", "price", "productID" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "cpCustomerID" : {
+          "type" : "string",
+          "description" : "A unique ID of the account in EV systems"
+        },
+        "spAccountID" : {
+          "type" : "string",
+          "description" : "A unique identifier of the account in Partner Systems "
+        },
+        "couponCode" : {
+          "type" : "string",
+          "description" : "Unique Coupon code applicable on the Product/ Package"
+        },
+        "packageID" : {
+          "type" : "string",
+          "description" : "Unique SKU/ Quick Code of the package.."
+        },
+        "productID" : {
+          "type" : "string",
+          "description" : "Unique SKU/ Quick Code of the product."
+        },
+        "price" : {
+          "type" : "number",
+          "description" : "Price of the Product/Package."
+        }
+      },
+      "description" : "Object to encapsulate applyCoupon request"
+    },
+    "GetPriceChargedRequest" : {
+      "type" : "object",
+      "required" : [ "GetPriceChargedRequestMessage" ],
+      "properties" : {
+        "GetPriceChargedRequestMessage" : {
+          "description" : "Object to encapsulate getPriceCharge request",
+          "$ref" : "#/definitions/GetPriceChargedRequestMessage"
+        }
+      },
+      "description" : "Object to encapsulate getPriceCharge request"
+    },
+    "PauseSubscriptionRequestMessage" : {
+      "type" : "object",
+      "required" : [ "PauseSubscriptionRequest" ],
+      "properties" : {
+        "PauseSubscriptionRequest" : {
+          "description" : "Object to encapsulate pauseSubscription request",
+          "$ref" : "#/definitions/PauseSubscriptionRequest"
+        }
+      },
+      "description" : "Object to encapsulate pauseSubscription request"
+    },
+    "ForgotContactPasswordRequestMsg" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "email" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "email" : {
+          "type" : "string",
+          "description" : "Unique email of the account."
+        }
+      },
+      "description" : "Object to encapsulate forgotContactPassword request"
+    },
+    "UpdatePaymentInfoResponseMessage" : {
+      "type" : "object",
+      "required" : [ "failureMessage", "paymentMethodId", "responseCode", "status" ],
+      "properties" : {
+        "status" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        },
+        "paymentMethodId" : {
+          "type" : "string",
+          "description" : "Unique payment method id of the Payment info of customer"
+        }
+      },
+      "description" : "Response of the updatePaymentInfo Api"
+    },
+    "UpdatePinResponse" : {
+      "type" : "object",
+      "required" : [ "UpdatePinRespMsg" ],
+      "properties" : {
+        "UpdatePinRespMsg" : {
+          "description" : "Object to encapsulate updatePin response",
+          "$ref" : "#/definitions/UpdatePinRespMsg"
+        }
+      },
+      "description" : "Object to encapsulate updatePin response"
+    },
+    "FailureMessage" : {
+      "type" : "object",
+      "required" : [ "errorCode", "errorMessage" ],
+      "properties" : {
+        "errorMessage" : {
+          "type" : "string",
+          "description" : "Error respone code. Ex if success, responseCode=1 and if error, responseCode=0"
+        },
+        "errorCode" : {
+          "type" : "string",
+          "description" : "Error respone code. responseCode=0"
+        }
+      },
+      "description" : "FailureMessage"
+    },
+    "RecordPlayTimeRequestMsg" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "sessionToken" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "sessionToken" : {
+          "type" : "string",
+          "description" : "A unique token generated for the account on successful authentication."
+        },
+        "assetId" : {
+          "type" : "string",
+          "description" : "Asset id that is selected for viewing.."
+        }
+      },
+      "description" : "Object to encapsulate recordPlayTime request"
+    },
+    "ValidCouponResponseMessage" : {
+      "type" : "object",
+      "required" : [ "couponDescription", "couponItemMsg", "failureMessage", "payMethRequired", "responseCode", "sku", "status" ],
+      "properties" : {
+        "status" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "couponDescription" : {
+          "type" : "string",
+          "description" : "Description of the coupon code."
+        },
+        "payMethRequired" : {
+          "type" : "boolean",
+          "description" : "Describes whether the payment method is required or not."
+        },
+        "sku" : {
+          "type" : "string",
+          "description" : "SKU of the product or package to which the coupon is applied"
+        },
+        "couponItemMsg" : {
+          "description" : "Coupon Item details.",
+          "$ref" : "#/definitions/CouponItemMsg"
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        }
+      },
+      "description" : "Response of the isValidCoupon Api"
+    },
+    "AddTVODOrderRequest" : {
+      "type" : "object",
+      "required" : [ "AddTVODOrderReqMessage" ],
+      "properties" : {
+        "AddTVODOrderReqMessage" : {
+          "description" : "Object to encapsulate addTVODOrder request",
+          "$ref" : "#/definitions/AddTVODOrderReqMessage"
+        }
+      },
+      "description" : "Object to encapsulate addTVODOrder request"
+    },
+    "GetPaymentMethodsResponseMessage" : {
+      "type" : "object",
+      "required" : [ "failureMessage", "paymentMethods", "responseCode", "status" ],
+      "properties" : {
+        "status" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "paymentMethods" : {
+          "type" : "array",
+          "description" : "Payment method details Message",
+          "items" : {
+            "$ref" : "#/definitions/PaymentMethodsInfo"
+          }
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        }
+      },
+      "description" : "Response of the getPaymentMethods Api"
+    },
+    "RemoveDeviceResponse" : {
+      "type" : "object",
+      "required" : [ "RemoveDeviceResponseMessage" ],
+      "properties" : {
+        "RemoveDeviceResponseMessage" : {
+          "description" : "RemoveDeviceResponseMessage",
+          "$ref" : "#/definitions/RemoveDeviceResponseMessage"
+        }
+      },
+      "description" : "Response of the RemoveDevice Api"
+    },
+    "ApplicablePlans" : {
+      "type" : "object",
+      "required" : [ "appID", "discountAmount", "name", "price", "priceToBeCharged", "sku", "vodPromoDetailMsg" ],
+      "properties" : {
+        "price" : {
+          "type" : "number",
+          "description" : "Price of the applicable product"
+        },
+        "name" : {
+          "type" : "string",
+          "description" : "Name of the applicable product"
+        },
+        "appID" : {
+          "type" : "string",
+          "description" : "Type of service. I.e. Product/Package"
+        },
+        "sku" : {
+          "type" : "string",
+          "description" : "Sku of the applicable product"
+        },
+        "priceToBeCharged" : {
+          "type" : "number",
+          "description" : "Price charged for the product after applying the coupon"
+        },
+        "discountAmount" : {
+          "type" : "number",
+          "description" : "Discount amount to the product after applying the coupon"
+        },
+        "vodPromoDetailMsg" : {
+          "type" : "array",
+          "description" : "VOD promotion details information",
+          "items" : {
+            "$ref" : "#/definitions/VODPromoDetailMsg"
+          }
+        }
+      },
+      "description" : "Applicable Plan details"
+    },
+    "ReactivateServiceRequest" : {
+      "type" : "object",
+      "required" : [ "ReactivateServiceReqMessage" ],
+      "properties" : {
+        "ReactivateServiceReqMessage" : {
+          "description" : "Object to encapsulate reactivateService request",
+          "$ref" : "#/definitions/ReactivateServiceReqMessage"
+        }
+      },
+      "description" : "Object to encapsulate reactivateService request"
+    },
+    "RemoveDeviceReqMessage" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "sessionToken" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "sessionToken" : {
+          "type" : "string",
+          "description" : "A unique token generated for the account on successful authentication."
+        },
+        "serialNo" : {
+          "type" : "string",
+          "description" : "Unique Serial number of the device. provide deviceId/SerialNo"
+        }
+      },
+      "description" : "Object to encapsulate RemoveDevice request"
+    },
+    "AddTVODOrderResponse" : {
+      "type" : "object",
+      "required" : [ "AddTVODOrderRespMessage" ],
+      "properties" : {
+        "AddTVODOrderRespMessage" : {
+          "description" : "Object to encapsulate addTVODOrder response",
+          "$ref" : "#/definitions/AddTVODOrderRespMessage"
+        }
+      },
+      "description" : "Object to encapsulate addTVODOrder with Coupon response"
+    },
+    "ForgotContactPasswordResponseMessage" : {
+      "type" : "object",
+      "required" : [ "ForgotContactPasswordResponseMsg" ],
+      "properties" : {
+        "ForgotContactPasswordResponseMsg" : {
+          "description" : "Object to encapsulate forgotContactPassword response",
+          "$ref" : "#/definitions/ForgotContactPasswordResponseMsg"
+        }
+      },
+      "description" : "Response of the forgotContactPassword Api"
+    },
+    "RecordPlayTimeRequest" : {
+      "type" : "object",
+      "required" : [ "RecordPlayTimeRequestMsg" ],
+      "properties" : {
+        "RecordPlayTimeRequestMsg" : {
+          "description" : "Object to encapsulate recordPlayTime request",
+          "$ref" : "#/definitions/RecordPlayTimeRequestMsg"
+        }
+      },
+      "description" : "Object to encapsulate recordPlayTime request"
+    },
+    "RecordPlayTimeResponse" : {
+      "type" : "object",
+      "required" : [ "RecordPlayTimeResponseMsg" ],
+      "properties" : {
+        "RecordPlayTimeResponseMsg" : {
+          "description" : "Object to encapsulate recordPlayTime response",
+          "$ref" : "#/definitions/RecordPlayTimeResponseMsg"
+        }
+      },
+      "description" : "Object to encapsulate recordPlayTime response"
+    },
+    "ForgotContactPasswordResponseMsg" : {
+      "type" : "object",
+      "required" : [ "failureMessage", "responseCode", "status" ],
+      "properties" : {
+        "status" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        }
+      },
+      "description" : "Response of the forgotContactPassword Api"
+    },
+    "SendEmailResponseMessage" : {
+      "type" : "object",
+      "required" : [ "failureMessage", "responseCode", "status" ],
+      "properties" : {
+        "status" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        },
+        "message" : {
+          "type" : "string",
+          "description" : "Indicates whether the mail is sent successfully or not."
+        }
+      },
+      "description" : "Response of the sendEmail Api"
+    },
+    "GetSubscriptionHistoryResponseMessage" : {
+      "type" : "object",
+      "required" : [ "AccountServiceMessage", "failureMessage", "message", "responseCode" ],
+      "properties" : {
+        "message" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "AccountServiceMessage" : {
+          "type" : "array",
+          "description" : "Array of available services info of account.",
+          "items" : {
+            "$ref" : "#/definitions/AccountServiceMsg"
+          }
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        }
+      },
+      "description" : "Response of the getSubscriptionHistory Api"
+    },
+    "ChangePasswordResponse" : {
+      "type" : "object",
+      "required" : [ "ChangePasswordResponseMessage" ],
+      "properties" : {
+        "ChangePasswordResponseMessage" : {
+          "description" : "Object to encapsulate changePassword response",
+          "$ref" : "#/definitions/ChangePasswordResponseMessage"
+        }
+      },
+      "description" : "Object to encapsulate changePassword response"
+    },
+    "ReactivateServiceRespMessage" : {
+      "type" : "object",
+      "required" : [ "failureMessage", "responseCode", "status" ],
+      "properties" : {
+        "status" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        },
+        "message" : {
+          "type" : "string",
+          "description" : "Service Re-activated"
+        }
+      },
+      "description" : "Response of the reactivateService Api"
+    },
+    "ForgotContactPasswordRequest" : {
+      "type" : "object",
+      "required" : [ "ForgotContactPasswordRequestMsg" ],
+      "properties" : {
+        "ForgotContactPasswordRequestMsg" : {
+          "description" : "Object to encapsulate forgotContactPassword request",
+          "$ref" : "#/definitions/ForgotContactPasswordRequestMsg"
+        }
+      },
+      "description" : "Object to encapsulate forgotContactPassword request"
+    },
+    "UpdateParentalControlDetailsRequestMesssage" : {
+      "type" : "object",
+      "required" : [ "UpdateParentalControlDetailsRequest" ],
+      "properties" : {
+        "UpdateParentalControlDetailsRequest" : {
+          "description" : "Object to encapsulate updateParentalControlDetails request",
+          "$ref" : "#/definitions/UpdateParentalControlDetailsRequest"
+        }
+      },
+      "description" : "Object to encapsulate updateParentalControlDetails request"
+    },
+    "UpdatePinReqstMsg" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "pin", "sessionToken" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "sessionToken" : {
+          "type" : "string",
+          "description" : "A unique token generated for the account on successful authentication."
+        },
+        "pin" : {
+          "type" : "string",
+          "description" : "Unique pin that is set to the customer account by the end user"
+        },
+        "userToken" : {
+          "type" : "string",
+          "description" : "Unique token that is received in email which is generated from sendEmail() API."
+        }
+      },
+      "description" : "Object to encapsulate updatePin request"
+    },
+    "FreeTrialResponseMessage" : {
+      "type" : "object",
+      "required" : [ "failureMessage", "responseCode", "status" ],
+      "properties" : {
+        "status" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "message" : {
+          "type" : "string",
+          "description" : "Indicates whether the free trial is  available or not."
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        }
+      },
+      "description" : "Response of the isCustomerEligibleForFreeTrial Api"
+    },
+    "ChangeServiceResponseMessage" : {
+      "type" : "object",
+      "required" : [ "failureMessage", "paramMessage", "responseCode", "status" ],
+      "properties" : {
+        "status" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "paramMessage" : {
+          "type" : "array",
+          "description" : "Details of the params that are returned.",
+          "items" : {
+            "$ref" : "#/definitions/ParamInfo"
+          }
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        }
+      },
+      "description" : "Response of the changeService Api"
+    },
+    "GetOrderDetailsResponse" : {
+      "type" : "object",
+      "required" : [ "failureMessage", "message", "orderDetails", "responseCode" ],
+      "properties" : {
+        "message" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        },
+        "orderDetails" : {
+          "type" : "array",
+          "description" : "Returns account order details",
+          "items" : {
+            "$ref" : "#/definitions/OrderDetails"
+          }
+        }
+      },
+      "description" : "Response of the getOrderDetails Api"
+    },
+    "changePasswordRequestMessage" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "confirmNewpassword", "newPassword", "oldPassword", "sessionToken" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "oldPassword" : {
+          "type" : "string",
+          "example" : "password1",
+          "description" : "Existing Customer password"
+        },
+        "newPassword" : {
+          "type" : "string",
+          "example" : "password2",
+          "description" : "new Customer password"
+        },
+        "confirmNewpassword" : {
+          "type" : "string",
+          "example" : "password2",
+          "description" : "Confirming new Customer password"
+        },
+        "sessionToken" : {
+          "type" : "string",
+          "description" : "A unique identifier of the account."
+        }
+      },
+      "description" : "Object to encapsulate changePassword request"
+    },
+    "ReactivateServiceReqMessage" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "serviceID", "serviceName", "sessionToken" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "sessionToken" : {
+          "type" : "string",
+          "description" : "A unique token generated for the account on successful authentication."
+        },
+        "serviceID" : {
+          "type" : "string",
+          "example" : "monthly_nzqq",
+          "description" : "SKU/ Quick code of the product in Evergent System."
+        },
+        "serviceName" : {
+          "type" : "string",
+          "description" : "Name of the service.Either serviceID or serviceName is mandatory."
+        }
+      },
+      "description" : "Object to encapsulate reactivateService request"
+    },
+    "ValidateTokenRequestMessage" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "email", "token" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "email" : {
+          "type" : "string",
+          "description" : "Customer’s registered primary email id."
+        },
+        "token" : {
+          "type" : "string",
+          "description" : "A unique user token of the account. Can be fetched from sendEmail() API response.."
+        }
+      },
+      "description" : "Object to encapsulate validateToken request"
+    },
+    "ChangePasswordResponseMessage" : {
+      "type" : "object",
+      "required" : [ "failureMessage", "message", "responseCode" ],
+      "properties" : {
+        "message" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        }
+      },
+      "description" : "Response of the changePassword Api"
+    },
+    "AddTVODOrderReqMessage" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "price", "sessionToken" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "sessionToken" : {
+          "type" : "string",
+          "description" : "A unique token generated for the account on successful authentication."
+        },
+        "price" : {
+          "type" : "number",
+          "description" : "Price of the Product/Package."
+        },
+        "title" : {
+          "type" : "string",
+          "description" : "Title of the asset"
+        },
+        "rentalPeriod" : {
+          "type" : "string",
+          "description" : "Rental period for the VOD that is ordered."
+        },
+        "assetID" : {
+          "type" : "string",
+          "description" : "Unique asset ID of the content."
+        },
+        "assetType" : {
+          "type" : "string",
+          "description" : "Type of the asset"
+        },
+        "paymentmethodInfo" : {
+          "description" : "Payment method details",
+          "$ref" : "#/definitions/PaymentMethodInfo"
+        }
+      },
+      "description" : "Object to encapsulate addTVODOrder request"
+    },
+    "ApplyCouponRequest" : {
+      "type" : "object",
+      "required" : [ "ApplyCouponRequestMessage" ],
+      "properties" : {
+        "ApplyCouponRequestMessage" : {
+          "description" : "Object to encapsulate applyCoupon request",
+          "$ref" : "#/definitions/ApplyCouponRequestMessage"
+        }
+      }
+    },
+    "GetOrderDetailsRequestMessage" : {
+      "type" : "object",
+      "required" : [ "GetOrderDetailsRequest" ],
+      "properties" : {
+        "GetOrderDetailsRequest" : {
+          "description" : "Object to encapsulate getOrderDetails request",
+          "$ref" : "#/definitions/GetOrderDetailsRequest"
+        }
+      },
+      "description" : "Object to encapsulate getOrderDetails request"
+    },
+    "FreeTrialRequestMessage" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "cpCustomerID" : {
+          "type" : "string",
+          "description" : "Unique customer id of the customer account in EV System."
+        },
+        "spAccountID" : {
+          "type" : "string",
+          "description" : "A unique identifier of the account in Partner Systems "
+        },
+        "cardNumber" : {
+          "type" : "string",
+          "description" : "Card number to check whether the free trial is available or not "
+        },
+        "isTVODEligible" : {
+          "type" : "string",
+          "description" : "Indicates whether the account is eligible with free trial or not. Possible Values: t/f"
+        },
+        "paymentMethodId" : {
+          "type" : "string",
+          "description" : "Unique Payment method id of the account"
+        }
+      },
+      "description" : "Object to encapsulate isCustomerEligibleForFreeTrial request"
+    },
+    "ApplyCouponResponseMessage" : {
+      "type" : "object",
+      "required" : [ "couponAmount", "couponType", "couponValue", "currencyCode", "failureMessage", "message", "payMethRequired", "price", "priceTobeCharged", "responseCode", "status" ],
+      "properties" : {
+        "status" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        },
+        "message" : {
+          "type" : "string",
+          "description" : "action message. Ex. Coupon message status"
+        },
+        "price" : {
+          "type" : "number",
+          "description" : "Actual Price of the Product/Package."
+        },
+        "couponAmount" : {
+          "type" : "number",
+          "description" : "Coupon Amount"
+        },
+        "couponType" : {
+          "type" : "string",
+          "description" : "Type of Coupon. Free/ Flat/ Percentage/ PercentageOff/ Validity Extension"
+        },
+        "couponValue" : {
+          "type" : "number",
+          "description" : "Value of Coupon"
+        },
+        "priceTobeCharged" : {
+          "type" : "number",
+          "description" : "Price after coupon applied"
+        },
+        "currencyCode" : {
+          "type" : "string",
+          "description" : "Indicates currency code of Country"
+        },
+        "payMethRequired" : {
+          "type" : "boolean",
+          "description" : "Indicates whether payment method required or not"
+        }
+      },
+      "description" : "Response of the applyCoupon Api"
+    },
+    "AccountPairedVoucherCodesRequest" : {
+      "type" : "object",
+      "required" : [ "AccountPairedVoucherCodesRequestMessage" ],
+      "properties" : {
+        "AccountPairedVoucherCodesRequestMessage" : {
+          "description" : "Object to encapsulate pairCustomer request",
+          "$ref" : "#/definitions/AccountPairedVoucherCodesRequestMessage"
+        }
+      },
+      "description" : "Object to encapsulate pairCustomer request"
+    },
+    "CheckPINRequest" : {
+      "type" : "object",
+      "required" : [ "CheckPINRequestMessage" ],
+      "properties" : {
+        "CheckPINRequestMessage" : {
+          "description" : "Object to encapsulate checkPIN request",
+          "$ref" : "#/definitions/CheckPINRequestMessage"
+        }
+      },
+      "description" : "Object to encapsulate checkPIN request"
+    },
+    "AddSubscriptionsResponse" : {
+      "type" : "object",
+      "required" : [ "AddSubscriptionsResponseMessage" ],
+      "properties" : {
+        "AddSubscriptionsResponseMessage" : {
+          "description" : "Object to encapsulate addSubscription response",
+          "$ref" : "#/definitions/AddSubscriptionsResponseMessage"
+        }
+      },
+      "description" : "Object to encapsulate addSubscription response"
+    },
+    "GetAccountPairedCouponCodesRequest" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "cpCustomerID" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "cpCustomerID" : {
+          "type" : "string",
+          "description" : "Unique customer id of the customer account in EV System."
+        }
+      },
+      "description" : "Object to encapsulate getAcctPairedCouponCodes request"
+    },
+    "UpdatePaymentInfoRequestMessage" : {
+      "type" : "object",
+      "required" : [ "CardInfoMessage", "apiPassword", "apiUser", "channelPartnerID", "label", "sessionToken" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "sessionToken" : {
+          "type" : "string",
+          "description" : "A unique token generated for the account on successful authentication."
+        },
+        "cpCustomerID" : {
+          "type" : "string",
+          "description" : "Unique customer id of the customer account in EV"
+        },
+        "label" : {
+          "type" : "string",
+          "description" : "Label type of the payment information. Ex. Card"
+        },
+        "isAutoPayment" : {
+          "type" : "boolean",
+          "description" : "Indicate whether the payment method is auto or not. Mandatory for first time"
+        },
+        "status" : {
+          "type" : "string",
+          "description" : "Status of the payment method"
+        },
+        "CardInfoMessage" : {
+          "type" : "array",
+          "description" : "Card Information message of customer",
+          "items" : {
+            "$ref" : "#/definitions/CardInfoMsg"
+          }
+        }
+      },
+      "description" : "Object to encapsulate updatePaymentInfo request"
+    },
+    "ResetPasswordRequestMessage" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "contactPassword", "userToken" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "email" : {
+          "type" : "string",
+          "description" : "Customer’s registered primary email id."
+        },
+        "userToken" : {
+          "type" : "string",
+          "description" : "User token received to the mail.."
+        },
+        "contactPassword" : {
+          "type" : "string",
+          "description" : "customer's new password."
+        }
+      },
+      "description" : "Object to encapsulate resetPassword request"
+    },
+    "CreateUserResponse" : {
+      "type" : "object",
+      "required" : [ "CreateUserResponseMessage" ],
+      "properties" : {
+        "CreateUserResponseMessage" : {
+          "description" : "CreateUserResponseMessage",
+          "$ref" : "#/definitions/CreateUserResponseMessage"
+        }
+      }
+    },
+    "GetPriceChargedResponse" : {
+      "type" : "object",
+      "required" : [ "GetPriceChargedResponseMessage" ],
+      "properties" : {
+        "GetPriceChargedResponseMessage" : {
+          "description" : "Object to encapsulate getPriceCharge response",
+          "$ref" : "#/definitions/GetPriceChargedResponseMessage"
+        }
+      },
+      "description" : "Object to encapsulate getPriceCharge response"
+    },
+    "UpdateProfileRequestMessage" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "sessionToken" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "sessionToken" : {
+          "type" : "string",
+          "description" : "A unique token generated for the account on successful authentication."
+        },
+        "pin" : {
+          "type" : "string",
+          "description" : "Unique pin that is set to the customer account by the end user"
+        },
+        "homePhone" : {
+          "type" : "string",
+          "description" : "Home phone number"
+        },
+        "email" : {
+          "type" : "string",
+          "description" : "Unique email of the account."
+        },
+        "firstName" : {
+          "type" : "string",
+          "description" : "First Name of the account"
+        },
+        "lastName" : {
+          "type" : "string",
+          "description" : "Last Name  of the account"
+        },
+        "mobileNumber" : {
+          "type" : "string",
+          "description" : "mobileNumber attached to the account"
+        },
+        "v" : {
+          "type" : "string",
+          "description" : "dateOfBirth  of the account"
+        },
+        "parentalControlLevel" : {
+          "type" : "boolean",
+          "description" : "Parental level assigned to the account "
+        },
+        "userName" : {
+          "type" : "string",
+          "description" : "username\tof the account"
+        }
+      },
+      "description" : "Object to encapsulate updateProfile request"
+    },
+    "PromotionMessage" : {
+      "type" : "object",
+      "required" : [ "isDefaultPromo", "isFreeTrail", "isVODPromotion", "promotionId", "promotionName" ],
+      "properties" : {
+        "promotionId" : {
+          "type" : "string",
+          "description" : "Promotion id applied to the order product."
+        },
+        "promotionName" : {
+          "type" : "string",
+          "description" : "Promotion name applied to the product"
+        },
+        "isVODPromotion" : {
+          "type" : "boolean",
+          "description" : "Indicates whether the promotion is VOD promotion or not."
+        },
+        "isDefaultPromo" : {
+          "type" : "boolean",
+          "description" : "Indicates whether the promotion is default promotion or not"
+        },
+        "isFreeTrail" : {
+          "type" : "boolean",
+          "description" : "Indicates whether the order is free trial or not"
+        }
+      },
+      "description" : "Promotion details array"
+    },
+    "GetSubscriptionHistoryResponse" : {
+      "type" : "object",
+      "required" : [ "GetSubscriptionHistoryResponseMessage" ],
+      "properties" : {
+        "GetSubscriptionHistoryResponseMessage" : {
+          "description" : "Object to encapsulate getSubscriptionHistory response",
+          "$ref" : "#/definitions/GetSubscriptionHistoryResponseMessage"
+        }
+      },
+      "description" : "Object to encapsulate getSubscriptionHistory response"
+    },
+    "GetAccountPairedCouponCodesResponseMessage" : {
+      "type" : "object",
+      "required" : [ "GetAccountPairedCouponCodesResponse" ],
+      "properties" : {
+        "GetAccountPairedCouponCodesResponse" : {
+          "description" : "Object to encapsulate getAcctPairedCouponCodes response",
+          "$ref" : "#/definitions/GetAccountPairedCouponCodesResponse"
+        }
+      },
+      "description" : "Object to encapsulate getAcctPairedCouponCodes response"
+    },
+    "GetOrderDetailsRequest" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "orderID", "sessionToken" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "sessionToken" : {
+          "type" : "string",
+          "description" : "A unique token generated for the account on successful authentication."
+        },
+        "orderID" : {
+          "type" : "string",
+          "description" : "Unique order id for the order."
+        }
+      },
+      "description" : "Object to encapsulate getOrderDetails request"
+    },
+    "GetActiveSubscriptionResponse" : {
+      "type" : "object",
+      "required" : [ "GetActiveSubscriptionResponseMessage" ],
+      "properties" : {
+        "GetActiveSubscriptionResponseMessage" : {
+          "description" : "GetActiveSubscriptionResponseMessage",
+          "$ref" : "#/definitions/GetActiveSubscriptionResponseMessage"
+        }
+      },
+      "description" : "Response of the getActiveSubscriptions Api"
+    },
+    "GetSubscriptionHistoryRequest" : {
+      "type" : "object",
+      "required" : [ "GetSubscriptionHistoryRequestMessage" ],
+      "properties" : {
+        "GetSubscriptionHistoryRequestMessage" : {
+          "description" : "Object to encapsulate getSubscriptionHistory request",
+          "$ref" : "#/definitions/GetSubscriptionHistoryRequestMessage"
+        }
+      },
+      "description" : "Object to encapsulate getSubscriptionHistory request"
+    },
+    "VODItemsMsg" : {
+      "type" : "object",
+      "required" : [ "rentalPeriod", "title" ],
+      "properties" : {
+        "rentalPeriod" : {
+          "type" : "string",
+          "description" : "Rental period of the content."
+        },
+        "title" : {
+          "type" : "string",
+          "description" : "Title of the content."
+        }
+      },
+      "description" : "VODItemsMsg"
+    },
+    "GetPaymentsRequestMessage" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "sessionToken" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "sessionToken" : {
+          "type" : "string",
+          "description" : "A unique token generated for the account on successful authentication."
+        }
+      },
+      "description" : "Object to encapsulate getPayments request"
+    },
+    "SendEmailRequest" : {
+      "type" : "object",
+      "required" : [ "SendEmailRequestMessage" ],
+      "properties" : {
+        "SendEmailRequestMessage" : {
+          "description" : "Object to encapsulate sendEmail request",
+          "$ref" : "#/definitions/SendEmailRequestMessage"
+        }
+      },
+      "description" : "Object to encapsulate sendEmail request"
+    },
+    "AccountPaymentsInfo" : {
+      "type" : "object",
+      "required" : [ "amount", "gatewayResponse", "orderedProductID", "paymentID", "paymentMethodID", "paymentType", "postingStatus", "receivedDate", "serviceName" ],
+      "properties" : {
+        "postingStatus" : {
+          "type" : "string",
+          "description" : "Status of the payment."
+        },
+        "paymentID" : {
+          "type" : "string",
+          "description" : "Unique id of the payment."
+        },
+        "amount" : {
+          "type" : "string",
+          "description" : "Amount charged for the payment."
+        },
+        "paymentMethodID" : {
+          "type" : "string",
+          "description" : "Unique id for the payment method\t."
+        },
+        "orderedProductID" : {
+          "type" : "string",
+          "description" : "Unique id for the order\t."
+        },
+        "paymentType" : {
+          "type" : "string",
+          "description" : "Type of the payment."
+        },
+        "gatewayResponse" : {
+          "type" : "string",
+          "description" : "Response message from gateway."
+        },
+        "serviceName" : {
+          "type" : "string",
+          "description" : "Name of the service."
+        },
+        "receivedDate" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "Date of payment made for the account (In Milliseconds)"
+        }
+      },
+      "description" : "Account Payment Info Msg"
+    },
+    "CreateUserRequest" : {
+      "type" : "object",
+      "required" : [ "CreateUserReqMessage" ],
+      "properties" : {
+        "CreateUserReqMessage" : {
+          "description" : "Object to encapsulate createUser request",
+          "$ref" : "#/definitions/CreateUserReqMessage"
+        }
+      },
+      "description" : "Object to encapsulate createUser request"
+    },
+    "ParamInfo" : {
+      "type" : "object",
+      "required" : [ "paramName", "paramValue" ],
+      "properties" : {
+        "paramName" : {
+          "type" : "string",
+          "description" : "Parameter name to which we need to update "
+        },
+        "paramValue" : {
+          "type" : "string",
+          "description" : "Parameter value to which we need to update "
+        }
+      },
+      "description" : "Parameters Info"
+    },
+    "GetPaymentMethodsRequestMessage" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "sessionToken" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "sessionToken" : {
+          "type" : "string",
+          "description" : "A unique token generated for the account on successful authentication."
+        }
+      },
+      "description" : "Object to encapsulate getPaymentMethods request"
+    },
+    "DeviceDetailsMessage" : {
+      "type" : "object",
+      "required" : [ "deviceType", "serialNo" ],
+      "properties" : {
+        "deviceName" : {
+          "type" : "string",
+          "example" : "iPhone Simulator",
+          "description" : "Name of the device"
+        },
+        "deviceType" : {
+          "type" : "string",
+          "example" : "iPhone",
+          "description" : "Type of the device"
+        },
+        "modelNo" : {
+          "type" : "string",
+          "example" : "iPhone Simulator",
+          "description" : "Model no of the Device"
+        },
+        "serialNo" : {
+          "type" : "string",
+          "example" : "AE16A337-65FF-422F-BB58-CBE453862C60",
+          "description" : "Unique Serial No of the device"
+        }
+      },
+      "description" : "Object to encapsulate details of a Device "
+    },
+    "ChangeServiceRequestMessage" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "effectiveDate", "newServiceID", "newServiceName", "oldServiceID", "olderviceName", "paymentmethodInfo", "sessionToken" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "sessionToken" : {
+          "type" : "string",
+          "description" : "A unique token generated for the account on successful authentication."
+        },
+        "couponCode" : {
+          "type" : "string",
+          "description" : "Unique Coupon code applicable on the Product/ Package"
+        },
+        "isReturnParams" : {
+          "type" : "boolean",
+          "description" : "Indicates whether to return additional params or not"
+        },
+        "effectiveDate" : {
+          "type" : "number",
+          "description" : "Date on which the service has to be changed."
+        },
+        "oldServiceID" : {
+          "type" : "string",
+          "description" : "ID of the existing service."
+        },
+        "newServiceID" : {
+          "type" : "string",
+          "description" : "ID of the service which is going to add."
+        },
+        "olderviceName" : {
+          "type" : "string",
+          "description" : "Name of the existing service."
+        },
+        "newServiceName" : {
+          "type" : "string",
+          "description" : "Name of the service which is going to add."
+        },
+        "paymentmethodInfo" : {
+          "description" : "Payment method details",
+          "$ref" : "#/definitions/PaymentMethodInfo"
+        }
+      },
+      "description" : "Object to encapsulate changeService request"
+    },
+    "ContactMsg" : {
+      "type" : "object",
+      "required" : [ "alertNotificationEmail", "alertNotificationPush", "allowTracking", "contactID", "email", "emailIsVerified", "firstName", "gender", "isPasswordExists", "isPrimaryContact", "language", "lastName", "main", "parentalControl", "pin", "socialLoginID", "socialLoginType", "userName" ],
+      "properties" : {
+        "alertNotificationEmail" : {
+          "type" : "boolean",
+          "description" : "True/False"
+        },
+        "alertNotificationPush" : {
+          "type" : "boolean",
+          "description" : "True/False"
+        },
+        "allowTracking" : {
+          "type" : "boolean",
+          "description" : "True/False"
+        },
+        "contactID" : {
+          "type" : "string",
+          "description" : "Unique Contact Id of Contact"
+        },
+        "email" : {
+          "type" : "string",
+          "description" : "User Email"
+        },
+        "emailIsVerified" : {
+          "type" : "boolean",
+          "description" : "Is the customer Mobile is verified or not"
+        },
+        "firstName" : {
+          "type" : "string",
+          "description" : "User First Name"
+        },
+        "gender" : {
+          "type" : "string",
+          "description" : "Gender of Contact"
+        },
+        "isPasswordExists" : {
+          "type" : "boolean",
+          "description" : "Password exists for the user ( True/False)"
+        },
+        "isPrimaryContact" : {
+          "type" : "boolean",
+          "description" : "True/False"
+        },
+        "language" : {
+          "type" : "string",
+          "description" : "Indicates language of Contact"
+        },
+        "lastName" : {
+          "type" : "string",
+          "description" : "User Last Name"
+        },
+        "main" : {
+          "type" : "boolean",
+          "description" : "main for the Account"
+        },
+        "parentalControl" : {
+          "type" : "boolean",
+          "description" : "True/False"
+        },
+        "pin" : {
+          "type" : "boolean",
+          "description" : "Pin has been set or not"
+        },
+        "socialLoginID" : {
+          "type" : "string",
+          "description" : "SocialLoginID of the User"
+        },
+        "socialLoginType" : {
+          "type" : "string",
+          "description" : "SocialLoginType of the User"
+        },
+        "userName" : {
+          "type" : "string",
+          "description" : "Login user name i.e. email"
+        }
+      },
+      "description" : "Contact Msg"
+    },
+    "CouponItemMsg" : {
+      "type" : "object",
+      "required" : [ "couponAmount", "isPackage", "packageName", "productName", "sku" ],
+      "properties" : {
+        "couponAmount" : {
+          "type" : "number",
+          "description" : "Coupon amount to be removed from actual amount"
+        },
+        "isPackage" : {
+          "type" : "boolean",
+          "description" : "Defines whether the item is package or not"
+        },
+        "sku" : {
+          "type" : "string",
+          "description" : "SKU of the product or package."
+        },
+        "productName" : {
+          "type" : "string",
+          "description" : "Name of the product."
+        },
+        "packageName" : {
+          "type" : "string",
+          "description" : "Name of the package."
+        }
+      },
+      "description" : "Object to encapsulate Coupon item Details"
+    },
+    "GetVoucherDetailsRequest" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "couponCode" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "couponCode" : {
+          "type" : "string",
+          "description" : "Coupon code which is to be redeemed on the product.."
+        }
+      },
+      "description" : "Object to encapsulate getVoucherDetails request"
+    },
+    "GetAccountDevicesResponse" : {
+      "type" : "object",
+      "required" : [ "GetAccountDevicesResponseMessage" ],
+      "properties" : {
+        "GetAccountDevicesResponseMessage" : {
+          "description" : "GetAccountDevicesResponseMessage",
+          "$ref" : "#/definitions/GetAccountDevicesResponseMessage"
+        }
+      },
+      "description" : "Response of the getAccountDevices Api"
+    },
+    "RecordPlayTimeResponseMsg" : {
+      "type" : "object",
+      "required" : [ "failureMessage", "message", "responseCode" ],
+      "properties" : {
+        "message" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        }
+      },
+      "description" : "Response of the recordPlayTime Api"
+    },
+    "CheckCredentialsResponse" : {
+      "type" : "object",
+      "required" : [ "CheckCredentialsResponseMsg" ],
+      "properties" : {
+        "CheckCredentialsResponseMsg" : {
+          "description" : "Object to encapsulate checkCredentials response",
+          "$ref" : "#/definitions/CheckCredentialsResponseMsg"
+        }
+      },
+      "description" : "Object to encapsulate checkCredentials response"
+    },
+    "CreateUserResponseMessage" : {
+      "type" : "object",
+      "required" : [ "failureMessage", "message", "responseCode" ],
+      "properties" : {
+        "message" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "spAccountID" : {
+          "type" : "string",
+          "description" : "A unique identifier of the account "
+        },
+        "cpCustomerID" : {
+          "type" : "string",
+          "description" : "A unique identifier of the account in Partner systems. This can be used for reconciliation purposes"
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        }
+      },
+      "description" : "Response of the createUser Api"
+    },
+    "GetVoucherDetailsResponseMessage" : {
+      "type" : "object",
+      "required" : [ "GetVoucherDetailsResponse" ],
+      "properties" : {
+        "GetVoucherDetailsResponse" : {
+          "description" : "Object to encapsulate getVoucherDetails response",
+          "$ref" : "#/definitions/GetVoucherDetailsResponse"
+        }
+      },
+      "description" : "Object to encapsulate getVoucherDetails response"
+    },
+    "CheckCredentialsResponseMsg" : {
+      "type" : "object",
+      "required" : [ "failureMessage", "responseCode", "status" ],
+      "properties" : {
+        "status" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        }
+      },
+      "description" : "Response of the checkCredentials Api"
+    },
+    "AuthenticateCustomerRespMessage" : {
+      "type" : "object",
+      "required" : [ "accountStatus", "channelPartner", "channelPartnerID", "contactID", "cpCustomerID", "failureMessage", "firstName", "isProfileComplete", "lastName", "message", "name", "responseCode", "sessionToken", "status", "tokenExpiryTime" ],
+      "properties" : {
+        "status" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "accountStatus" : {
+          "type" : "string",
+          "description" : "Indicates the status of Account"
+        },
+        "channelPartner" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner of the account"
+        },
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner of the account"
+        },
+        "contactID" : {
+          "type" : "string",
+          "description" : "Unique ID of the contact\t"
+        },
+        "cpCustomerID" : {
+          "type" : "string",
+          "description" : "A unique identifier of the account in Partner systems. This can be used for reconciliation purposes"
+        },
+        "firstName" : {
+          "type" : "string",
+          "description" : "User First Name"
+        },
+        "isProfileComplete" : {
+          "type" : "boolean",
+          "description" : "Indicates T/F, whether the customer Profile is complete or not"
+        },
+        "lastName" : {
+          "type" : "string",
+          "description" : "User Last Name"
+        },
+        "message" : {
+          "type" : "string",
+          "description" : "Message indicating whether user logged successfully or not."
+        },
+        "name" : {
+          "type" : "string",
+          "description" : "Indicates complete name of customer"
+        },
+        "sessionToken" : {
+          "type" : "string",
+          "description" : "Unique session token generated on successful authentication."
+        },
+        "tokenExpiryTime" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "Indicates Expiry time of SessionToken in milliseconds"
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        }
+      },
+      "description" : "Response of the authenticateCustomer Api"
+    },
+    "RedeemCouponRequestMessage" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "quantity", "serviceID", "serviceType", "sessionToken" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "sessionToken" : {
+          "type" : "string",
+          "description" : "A unique token generated for the account on successful authentication."
+        },
+        "serviceID" : {
+          "type" : "string",
+          "example" : "monthly_india",
+          "description" : "SKU/ Quick code of the product in Evergent System."
+        },
+        "serviceType" : {
+          "type" : "string",
+          "description" : "Product/Package example: PRODUCT"
+        },
+        "couponCode" : {
+          "type" : "string",
+          "description" : "Coupon defined for package/product"
+        },
+        "quantity" : {
+          "type" : "number",
+          "example" : 3.0,
+          "description" : "Quantity of the order."
+        }
+      },
+      "description" : "Object to encapsulate redeemCoupon request"
+    },
+    "CouponCodeDetails" : {
+      "type" : "object",
+      "required" : [ "couponCode", "couponExpiry", "descrip", "discountAmount", "discountType", "paymentMethodRequired", "period", "validityEndDate" ],
+      "properties" : {
+        "duration" : {
+          "type" : "string",
+          "description" : "Duration of the coupon. Ex.120 months"
+        },
+        "couponExpiry" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "Expiry date of the coupon."
+        },
+        "discountType" : {
+          "type" : "string",
+          "description" : "Type of discount that is applied to the product.\tEx.Free,Flat,FlatOff,Percentage,PercentageOff."
+        },
+        "descrip" : {
+          "type" : "string",
+          "description" : "Description for the  coupon code"
+        },
+        "couponCode" : {
+          "type" : "string",
+          "description" : "Name of the coupon code."
+        },
+        "discountAmount" : {
+          "type" : "number",
+          "description" : "Discount amount to the product after applying the coupon.\t"
+        },
+        "paymentMethodRequired" : {
+          "type" : "boolean",
+          "description" : "Indicates whether the voucher is SPARK voucher or Non-Spark voucher. if True then Non-Spark voucher; if false, it is Spark voucher."
+        },
+        "period" : {
+          "type" : "string",
+          "description" : "Indicates the period of the promotion type.\tEx. NoOfMonths"
+        },
+        "validityEndDate" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "End Date of the Voucher applied.\tUsed as Next payment date."
+        },
+        "promotionID" : {
+          "type" : "string",
+          "description" : "Promotion id applied for the product\tReturns only on promotional voucher types."
+        },
+        "isTVODPromo" : {
+          "type" : "boolean",
+          "description" : "Indicates whether the voucher is TVOD or not"
+        }
+      },
+      "description" : "Object to encapsulate Coupon Code Details"
+    },
+    "RemoveSubscriptionResponse" : {
+      "type" : "object",
+      "required" : [ "RemoveSubscriptionRespMessage" ],
+      "properties" : {
+        "RemoveSubscriptionRespMessage" : {
+          "description" : "Object to encapsulate removeSubscription response",
+          "$ref" : "#/definitions/RemoveSubscriptionRespMessage"
+        }
+      },
+      "description" : "Object to encapsulate removeSubscription response"
+    },
+    "GetActiveSubscriptionRequestMessage" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "sessionToken" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "sessionToken" : {
+          "type" : "string",
+          "description" : "A unique token generated for the account on successful authentication."
+        }
+      },
+      "description" : "Object to encapsulate getActiveSubscriptions request"
+    },
+    "CardInfoMsg" : {
+      "type" : "object",
+      "required" : [ "cardNumber", "expiryDate", "nameOnCard", "securityCode" ],
+      "properties" : {
+        "cardNumber" : {
+          "type" : "string",
+          "description" : "Card number of the customer"
+        },
+        "expiryDate" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "Expiry date id of the card"
+        },
+        "nameOnCard" : {
+          "type" : "string",
+          "example" : "App Store Billing",
+          "description" : "Name which is present on the card"
+        },
+        "securityCode" : {
+          "type" : "string",
+          "description" : "Security code of the card."
+        }
+      },
+      "description" : "Payment method details"
+    },
+    "ServicesInfo" : {
+      "type" : "object",
+      "required" : [ "quantity", "serviceID", "serviceType" ],
+      "properties" : {
+        "serviceID" : {
+          "type" : "string",
+          "example" : "monthly_india",
+          "description" : "SKU/ Quick code of the product in Evergent System."
+        },
+        "serviceType" : {
+          "type" : "string",
+          "example" : "PRODUCT",
+          "description" : "Product/Package "
+        },
+        "quantity" : {
+          "type" : "string",
+          "description" : "Quantity of the order "
+        }
+      },
+      "description" : "Services Message details"
+    },
+    "ValidCouponResponse" : {
+      "type" : "object",
+      "required" : [ "ValidCouponResponseMessage" ],
+      "properties" : {
+        "ValidCouponResponseMessage" : {
+          "description" : "Object to encapsulate isValidCoupon response",
+          "$ref" : "#/definitions/ValidCouponResponseMessage"
+        }
+      },
+      "description" : "Object to encapsulate isValidCoupon response"
+    },
+    "AddSubscriptionRequestMessage" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "paymentmethodInfo", "services", "sessionToken" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "sessionToken" : {
+          "type" : "string",
+          "description" : "A unique token generated for the account on successful authentication."
+        },
+        "couponCode" : {
+          "type" : "string",
+          "description" : "Unique Coupon code applicable on the Product/ Package"
+        },
+        "isSkipDefaultPromo" : {
+          "type" : "boolean",
+          "description" : "UIndicates promotion to be skipped or not"
+        },
+        "paymentmethodInfo" : {
+          "description" : "Payment method details",
+          "$ref" : "#/definitions/PaymentMethodInfo"
+        },
+        "services" : {
+          "description" : "Services Message details",
+          "$ref" : "#/definitions/ServicesMsg"
+        }
+      },
+      "description" : "Object to encapsulate addSubscription request"
+    },
+    "PauseSubscriptionResponseMessage" : {
+      "type" : "object",
+      "required" : [ "PauseSubscriptionResponse" ],
+      "properties" : {
+        "PauseSubscriptionResponse" : {
+          "description" : "Object to encapsulate pauseSubscription response",
+          "$ref" : "#/definitions/PauseSubscriptionResponse"
+        }
+      },
+      "description" : "Object to encapsulate pauseSubscription response"
+    },
+    "GetProductsResponseMessage" : {
+      "type" : "object",
+      "required" : [ "failureMessage", "productsResponseMessage", "responseCode", "status" ],
+      "properties" : {
+        "status" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "productsResponseMessage" : {
+          "type" : "array",
+          "description" : "Array of Product Details specific to DMA",
+          "items" : {
+            "$ref" : "#/definitions/ProductsResponseMessage"
+          }
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        }
+      },
+      "description" : "Response of the getProducts Api"
+    },
+    "ValidateTokenRequest" : {
+      "type" : "object",
+      "required" : [ "ValidateTokenRequestMessage" ],
+      "properties" : {
+        "ValidateTokenRequestMessage" : {
+          "description" : "Object to encapsulate validateToken request",
+          "$ref" : "#/definitions/ValidateTokenRequestMessage"
+        }
+      },
+      "description" : "Object to encapsulate validateToken request"
+    },
+    "ValidCouponRequest" : {
+      "type" : "object",
+      "required" : [ "ValidCouponRequestMessage" ],
+      "properties" : {
+        "ValidCouponRequestMessage" : {
+          "description" : "Object to encapsulate isValidCoupon request",
+          "$ref" : "#/definitions/ValidCouponRequestMessage"
+        }
+      },
+      "description" : "Object to encapsulate isValidCoupon request"
+    },
+    "GetContactRequestMessage" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "sessionToken" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "sessionToken" : {
+          "type" : "string",
+          "description" : "A unique token generated for the account on successful authentication."
+        }
+      },
+      "description" : "Object to encapsulate getContact request"
+    },
+    "PauseSubscriptionResponse" : {
+      "type" : "object",
+      "required" : [ "failureMessage", "responseCode", "status" ],
+      "properties" : {
+        "status" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        },
+        "message" : {
+          "type" : "string",
+          "description" : "Indicates whether the customer account is paused successfully or not."
+        }
+      },
+      "description" : "Response of the pauseSubscription Api"
+    },
+    "GetPriceChargedResponseMessage" : {
+      "type" : "object",
+      "required" : [ "failureMessage", "responseCode", "status" ],
+      "properties" : {
+        "status" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "promotionMessage" : {
+          "type" : "array",
+          "description" : "Promotion details array",
+          "items" : {
+            "$ref" : "#/definitions/PromotionMessage"
+          }
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        }
+      },
+      "description" : "Response of the getPriceCharge Api"
+    },
+    "GetContactRequest" : {
+      "type" : "object",
+      "required" : [ "GetContactRequestMessage" ],
+      "properties" : {
+        "GetContactRequestMessage" : {
+          "description" : "Object to encapsulate getContact request",
+          "$ref" : "#/definitions/GetContactRequestMessage"
+        }
+      },
+      "description" : "Object to encapsulate getContact request"
+    },
+    "RedeemCouponResponse" : {
+      "type" : "object",
+      "required" : [ "RedeemCouponResponseMessage" ],
+      "properties" : {
+        "RedeemCouponResponseMessage" : {
+          "description" : "Object to encapsulate redeemCoupon response",
+          "$ref" : "#/definitions/RedeemCouponResponseMessage"
+        }
+      },
+      "description" : "Object to encapsulate redeemCoupon response"
+    },
+    "FreeTrialRequest" : {
+      "type" : "object",
+      "required" : [ "FreeTrialRequestMessage" ],
+      "properties" : {
+        "FreeTrialRequestMessage" : {
+          "description" : "Object to encapsulate isCustomerEligibleForFreeTrial request",
+          "$ref" : "#/definitions/FreeTrialRequestMessage"
+        }
+      },
+      "description" : "Object to encapsulate isCustomerEligibleForFreeTrial request"
+    },
+    "AuthenticateCustomerResponseMessage" : {
+      "type" : "object",
+      "required" : [ "AuthenticateCustomerRespMessage" ],
+      "properties" : {
+        "AuthenticateCustomerRespMessage" : {
+          "description" : "AuthenticateCustomerRespMessage",
+          "$ref" : "#/definitions/AuthenticateCustomerRespMessage"
+        }
+      }
+    },
+    "GetContactResponse" : {
+      "type" : "object",
+      "required" : [ "GetContactResponseMessage" ],
+      "properties" : {
+        "GetContactResponseMessage" : {
+          "description" : "GetContactResponseMessage",
+          "$ref" : "#/definitions/GetContactResponseMessage"
+        }
+      },
+      "description" : "Response of the getContact Api"
+    },
+    "UpdatePaymentInfoRequest" : {
+      "type" : "object",
+      "required" : [ "UpdatePaymentInfoRequestMessage" ],
+      "properties" : {
+        "UpdatePaymentInfoRequestMessage" : {
+          "description" : "Object to encapsulate updatePaymentInfo request",
+          "$ref" : "#/definitions/UpdatePaymentInfoRequestMessage"
+        }
+      },
+      "description" : "Object to encapsulate updatePaymentInfo request"
+    },
+    "ReactivateServiceResponse" : {
+      "type" : "object",
+      "required" : [ "ReactivateServiceRespMessage" ],
+      "properties" : {
+        "ReactivateServiceRespMessage" : {
+          "description" : "Object to encapsulate reactivateService response",
+          "$ref" : "#/definitions/ReactivateServiceRespMessage"
+        }
+      },
+      "description" : "Object to encapsulate reactivateService response"
+    },
+    "AuthenticateCustomerRequest" : {
+      "type" : "object",
+      "required" : [ "AuthenticateCustomerReqMessage" ],
+      "properties" : {
+        "AuthenticateCustomerReqMessage" : {
+          "description" : "Object to encapsulate authenticateCustomer request",
+          "$ref" : "#/definitions/AuthenticateCustomerReqMessage"
+        }
+      },
+      "description" : "Object to encapsulate authenticateCustomer request"
+    },
+    "ChangeServiceResponse" : {
+      "type" : "object",
+      "required" : [ "ChangeServiceResponseMessage" ],
+      "properties" : {
+        "ChangeServiceResponseMessage" : {
+          "description" : "Object to encapsulate changeService response",
+          "$ref" : "#/definitions/ChangeServiceResponseMessage"
+        }
+      },
+      "description" : "Object to encapsulate changeService response"
+    },
+    "FreeTrialResponse" : {
+      "type" : "object",
+      "required" : [ "FreeTrialResponseMessage" ],
+      "properties" : {
+        "FreeTrialResponseMessage" : {
+          "description" : "Object to encapsulate isCustomerEligibleForFreeTrial response. ",
+          "$ref" : "#/definitions/FreeTrialResponseMessage"
+        }
+      },
+      "description" : "Object to encapsulate isCustomerEligibleForFreeTrial response"
+    },
+    "GetSubscriptionHistoryRequestMessage" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "sessionToken" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "sessionToken" : {
+          "type" : "string",
+          "description" : "A unique token generated for the account on successful authentication."
+        },
+        "involuntarySuspend" : {
+          "type" : "string",
+          "description" : "Indicate whether the account is involuntarily Suspended Account."
+        },
+        "status" : {
+          "type" : "string",
+          "description" : "Indicates status of the subscription.Possible values: Final Bill/HoldOnNpmt"
+        }
+      },
+      "description" : "Object to encapsulate getSubscriptionHistory request"
+    },
+    "AccountPairedVoucherCodesRequestMessage" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "effectiveDate", "method", "voucherCode" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "emailID" : {
+          "type" : "string",
+          "description" : "Registered primary email for the account."
+        },
+        "effectiveDate" : {
+          "type" : "string",
+          "description" : "Start Date of the coupon which is active for the customer."
+        },
+        "voucherCode" : {
+          "type" : "string",
+          "description" : "Coupon code/Voucher code for the customer."
+        },
+        "method" : {
+          "type" : "string",
+          "description" : "Pair coupon to the account."
+        }
+      },
+      "description" : "Object to encapsulate pairCustomer request"
+    },
+    "CheckPINRequestMessage" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "pin", "sessionToken" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "sessionToken" : {
+          "type" : "string",
+          "description" : "A unique token generated for the account on successful authentication."
+        },
+        "pin" : {
+          "type" : "string",
+          "description" : "Unique pin that is set to the customer account by the end user"
+        }
+      },
+      "description" : "Object to encapsulate checkPIN request"
+    },
+    "PaymentmethodInfo" : {
+      "type" : "object",
+      "properties" : {
+        "label" : {
+          "type" : "string",
+          "example" : "App Store Billing",
+          "description" : "Label of the payment method"
+        },
+        "makeAutoPayment" : {
+          "type" : "boolean",
+          "description" : " To make payment method as auto."
+        }
+      },
+      "description" : "Payment method details"
+    },
+    "ValidCouponRequestMessage" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "couponCode", "sessionToken" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "sessionToken" : {
+          "type" : "string",
+          "description" : "A unique token generated for the account on successful authentication."
+        },
+        "couponCode" : {
+          "type" : "string",
+          "description" : "Coupon code which is to be redeemed on the product."
+        }
+      },
+      "description" : "Object to encapsulate isValidCoupon request"
+    },
+    "PaymentMethodsInfo" : {
+      "type" : "object",
+      "required" : [ "otherPaymentMethod", "paramName", "status" ],
+      "properties" : {
+        "status" : {
+          "type" : "string",
+          "description" : "Status of the payment method."
+        },
+        "label" : {
+          "type" : "string",
+          "description" : "Label of the payment method"
+        },
+        "paramName" : {
+          "type" : "boolean",
+          "description" : "Indicates whether the payment method is auto payment or not "
+        },
+        "otherPaymentMethod" : {
+          "description" : "Other payment methods information",
+          "$ref" : "#/definitions/OtherPaymentMethod"
+        },
+        "cardInfoMsg" : {
+          "description" : "Payment card details",
+          "$ref" : "#/definitions/CardInfoMsg"
+        },
+        "transactionReferenceMsg" : {
+          "description" : "Transaction Reference Msg Details",
+          "$ref" : "#/definitions/TransactionReferenceMsg"
+        }
+      },
+      "description" : "Payment methods information"
+    },
+    "UpdatePaymentInfoResponse" : {
+      "type" : "object",
+      "required" : [ "UpdatePaymentInfoResponseMessage" ],
+      "properties" : {
+        "UpdatePaymentInfoResponseMessage" : {
+          "description" : "Object to encapsulate updatePaymentInfo response",
+          "$ref" : "#/definitions/UpdatePaymentInfoResponseMessage"
+        }
+      },
+      "description" : "Object to encapsulate updatePaymentInfo response"
+    },
+    "ValidateTokenResponseMessage" : {
+      "type" : "object",
+      "required" : [ "failureMessage", "message", "responseCode" ],
+      "properties" : {
+        "message" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        }
+      },
+      "description" : "Response of the validateToken Api"
+    },
+    "ChangeServiceRequest" : {
+      "type" : "object",
+      "required" : [ "ChangeServiceRequestMessage" ],
+      "properties" : {
+        "ChangeServiceRequestMessage" : {
+          "description" : "Object to encapsulate changeService request",
+          "$ref" : "#/definitions/ChangeServiceRequestMessage"
+        }
+      },
+      "description" : "Object to encapsulate changeService request"
+    },
+    "VODPromoDetailMsg" : {
+      "type" : "object",
+      "required" : [ "commercialModel", "quantity", "serviceType" ],
+      "properties" : {
+        "commercialModel" : {
+          "type" : "number",
+          "description" : "Price of the applicable product"
+        },
+        "quantity" : {
+          "type" : "string",
+          "description" : "quantity of the applicable product"
+        },
+        "serviceType" : {
+          "type" : "string",
+          "description" : "Type of service. I.e. Product/Package"
+        }
+      },
+      "description" : "VODPromoDetailMsg"
+    },
+    "AccountServiceMsg" : {
+      "type" : "object",
+      "required" : [ "description", "isRenewal", "orderID", "promotions", "retailPrice", "serviceID", "serviceName", "startDate", "status", "validityTill", "vodItems" ],
+      "properties" : {
+        "description" : {
+          "type" : "string",
+          "description" : "Service description "
+        },
+        "isRenewal" : {
+          "type" : "boolean",
+          "description" : "Indicates whether the service is Renewable or not."
+        },
+        "orderID" : {
+          "type" : "string",
+          "description" : "Order id of the  product"
+        },
+        "retailPrice" : {
+          "type" : "number",
+          "description" : "Service retailPrice "
+        },
+        "serviceID" : {
+          "type" : "string",
+          "description" : "SKU/ Quick code of the product in Evergent System"
+        },
+        "serviceName" : {
+          "type" : "string",
+          "description" : "Service Name of the product/package"
+        },
+        "startDate" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "Start Date of the service (In Milliseconds)"
+        },
+        "status" : {
+          "type" : "string",
+          "description" : "Status of the Subscription of the customer"
+        },
+        "validityTill" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "Validity of the service which is active for the account"
+        },
+        "vodItems" : {
+          "description" : "VOD items for the account",
+          "$ref" : "#/definitions/VODItemsMsg"
+        },
+        "promotions" : {
+          "type" : "array",
+          "description" : "Promotion details that are applied to the product\t",
+          "items" : {
+            "$ref" : "#/definitions/PromotionsMsg"
+          }
+        },
+        "packageItems" : {
+          "type" : "array",
+          "description" : "Array of Package Items information of the Package service",
+          "items" : {
+            "$ref" : "#/definitions/PackageItemsInfo"
+          }
+        }
+      },
+      "description" : "AccountServiceMsg"
+    },
+    "CheckCredentialsRequest" : {
+      "type" : "object",
+      "required" : [ "CheckCredentialsReqMessage" ],
+      "properties" : {
+        "CheckCredentialsReqMessage" : {
+          "description" : "Object to encapsulate checkCredentials request",
+          "$ref" : "#/definitions/CheckCredentialsReqMessage"
+        }
+      },
+      "description" : "Object to encapsulate checkCredentials request"
+    },
+    "CreateUserReqMessage" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "dmaId" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "customerUsername" : {
+          "type" : "string",
+          "description" : "Customer username\t"
+        },
+        "customerPassword" : {
+          "type" : "string",
+          "description" : "Customer password"
+        },
+        "firstName" : {
+          "type" : "string",
+          "description" : "User First Name"
+        },
+        "lastName" : {
+          "type" : "string",
+          "description" : "User Last Name"
+        },
+        "dmaId" : {
+          "type" : "string",
+          "description" : "Unique Zone-X-ref Id of channel partner"
+        },
+        "email" : {
+          "type" : "string",
+          "description" : "User Email"
+        }
+      },
+      "description" : "Object to encapsulate createUser request"
+    },
+    "SendEmailResponse" : {
+      "type" : "object",
+      "required" : [ "SendEmailResponseMessage" ],
+      "properties" : {
+        "SendEmailResponseMessage" : {
+          "description" : "Object to encapsulate sendEmail response",
+          "$ref" : "#/definitions/SendEmailResponseMessage"
+        }
+      },
+      "description" : "Object to encapsulate sendEmail response"
+    },
+    "ApplyCouponResponse" : {
+      "type" : "object",
+      "required" : [ "ApplyCouponResponseMessage" ],
+      "properties" : {
+        "ApplyCouponResponseMessage" : {
+          "description" : "Object to encapsulate applyCoupon response",
+          "$ref" : "#/definitions/ApplyCouponResponseMessage"
+        }
+      },
+      "description" : "Response of the applyCoupon Api"
+    },
+    "CheckCredentialsReqMessage" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "contactPassword", "contactUserName" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "contactUserName" : {
+          "type" : "string",
+          "description" : "Customer’s registered primary contact user name"
+        },
+        "contactPassword" : {
+          "type" : "string",
+          "description" : "Customer’s registered primary contact password"
+        }
+      },
+      "description" : "Object to encapsulate checkCredentials request"
+    },
+    "TransactionReferenceMsg" : {
+      "type" : "object",
+      "properties" : {
+        "amount" : {
+          "type" : "string",
+          "example" : "150",
+          "description" : "Transaction Amount"
+        },
+        "txID" : {
+          "type" : "string",
+          "example" : "receipt from App Store",
+          "description" : "Unique ID of the transaction"
+        },
+        "txMsg" : {
+          "type" : "string",
+          "example" : "Success",
+          "description" : "Transaction Message"
+        }
+      },
+      "description" : "Transaction Reference Msg Details"
+    },
+    "OrderDetails" : {
+      "type" : "object",
+      "required" : [ "chargedPrice", "freeTrial", "paymentMethodId", "productName", "retailPrice", "sku" ],
+      "properties" : {
+        "promotionType" : {
+          "type" : "string",
+          "description" : "Type of promotion applied to the order product."
+        },
+        "PromotionEndDate" : {
+          "type" : "string",
+          "description" : "Promotion end date to the product."
+        },
+        "promotionPeriod" : {
+          "type" : "string",
+          "description" : "Promotion period applied to the product"
+        },
+        "promotionDuration" : {
+          "type" : "string",
+          "description" : "Promotion duration applied to the product"
+        },
+        "promotionAmount" : {
+          "type" : "number",
+          "description" : "Promotion amount applied to the product"
+        },
+        "promotionId" : {
+          "type" : "string",
+          "description" : "Promotion applied to the product"
+        },
+        "nextPaymentDate" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "Next payment date of the service"
+        },
+        "productName" : {
+          "type" : "string",
+          "description" : "Name of the ordered product"
+        },
+        "chargedPrice" : {
+          "type" : "number",
+          "description" : "Amount charged for the order."
+        },
+        "retailPrice" : {
+          "type" : "number",
+          "description" : "Actual product price of the product"
+        },
+        "voucherCode" : {
+          "type" : "string",
+          "description" : "Voucher code applied to the product"
+        },
+        "freeTrial" : {
+          "type" : "boolean",
+          "description" : "Indicates whether service is free trial or not"
+        },
+        "paymentMethodId" : {
+          "type" : "string",
+          "description" : "Unique payment method id of the paymentMethod added to the account"
+        },
+        "sku" : {
+          "type" : "string",
+          "description" : "Product id that is ordered to the account"
+        }
+      }
+    },
+    "AccountDeviceDetails" : {
+      "type" : "object",
+      "required" : [ "deviceId", "deviceName", "deviceType", "modelNo", "owner", "returnLater", "serialNo", "startDate", "status" ],
+      "properties" : {
+        "deviceId" : {
+          "type" : "string",
+          "description" : "deviceId\tId of the device. "
+        },
+        "deviceName" : {
+          "type" : "string",
+          "description" : "deviceName\tName of the device. "
+        },
+        "deviceType" : {
+          "type" : "string",
+          "description" : "Type of device "
+        },
+        "modelNo" : {
+          "type" : "string",
+          "description" : "Model number of the device. "
+        },
+        "owner" : {
+          "type" : "string",
+          "description" : "Owner details. "
+        },
+        "returnLater" : {
+          "type" : "boolean",
+          "description" : "Quantity of the devices to send "
+        },
+        "serialNo" : {
+          "type" : "string",
+          "description" : "Unique Serial number of the device. provide deviceId/SerialNo"
+        },
+        "startDate" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "Start Date of the device (In Milliseconds)"
+        },
+        "status" : {
+          "type" : "string",
+          "description" : "Staus of the device. "
+        }
+      },
+      "description" : "AccountDeviceDetails"
+    },
+    "ProductsResponseMessage" : {
+      "type" : "object",
+      "required" : [ "appChannels", "basicService", "currencyCode", "displayName", "displayOrder", "dmaName", "duration", "isAdsEnabled", "period", "productDescription", "productName", "renewable", "retailPrice", "scOfferTypes", "skuORQuickCode" ],
+      "properties" : {
+        "dmaName" : {
+          "type" : "string",
+          "description" : "Name of the DMA"
+        },
+        "duration" : {
+          "type" : "string",
+          "description" : "Duration of the product"
+        },
+        "retailPrice" : {
+          "type" : "number",
+          "description" : "Retail price of the product"
+        },
+        "currencyCode" : {
+          "type" : "string",
+          "description" : "Currency code for the product"
+        },
+        "productDescription" : {
+          "type" : "string",
+          "description" : "Description of the product"
+        },
+        "renewable" : {
+          "type" : "boolean",
+          "description" : "Indicates whether the product is renewable or not"
+        },
+        "displayName" : {
+          "type" : "string",
+          "description" : "Displayed name of the product"
+        },
+        "displayOrder" : {
+          "type" : "string",
+          "description" : "Display order of the product"
+        },
+        "isAdsEnabled" : {
+          "type" : "boolean",
+          "description" : "are ads enabled"
+        },
+        "period" : {
+          "type" : "string",
+          "description" : "Period of the product"
+        },
+        "productName" : {
+          "type" : "string",
+          "description" : "Name of the product"
+        },
+        "skuORQuickCode" : {
+          "type" : "string",
+          "description" : "SKU of the product"
+        },
+        "basicService" : {
+          "type" : "boolean",
+          "description" : "Indicates whether the product is basic service or not"
+        },
+        "appChannels" : {
+          "type" : "string",
+          "description" : "Data related to channels"
+        },
+        "scOfferTypes" : {
+          "type" : "string",
+          "description" : "Offer types related to product"
+        },
+        "promotions" : {
+          "type" : "array",
+          "description" : "Promotions defined to the product",
+          "items" : {
+            "$ref" : "#/definitions/Promotions"
+          }
+        }
+      },
+      "description" : "Product Details specific to DMA"
+    },
+    "RemoveSubscriptionRequest" : {
+      "type" : "object",
+      "required" : [ "RemoveSubscriptionReqMessage" ],
+      "properties" : {
+        "RemoveSubscriptionReqMessage" : {
+          "description" : "Object to encapsulate removeSubscription request",
+          "$ref" : "#/definitions/RemoveSubscriptionReqMessage"
+        }
+      },
+      "description" : "Object to encapsulate removeSubscription request"
+    },
+    "AcctPairedCouponCodes" : {
+      "type" : "object",
+      "required" : [ "expiration", "status", "voucherDescription" ],
+      "properties" : {
+        "voucherDescription" : {
+          "type" : "string",
+          "description" : "Indicates description of the Couponcode/voucherCode"
+        },
+        "expiration" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "Expired date of the coupon (In Milliseconds)"
+        },
+        "status" : {
+          "type" : "string",
+          "description" : "Status of the Couponcode/voucherCode"
+        }
+      },
+      "description" : "AcctPairedCouponCodes"
+    },
+    "CheckPINResponse" : {
+      "type" : "object",
+      "required" : [ "CheckPINResponseMessage" ],
+      "properties" : {
+        "CheckPINResponseMessage" : {
+          "description" : "Object to encapsulate checkPIN response",
+          "$ref" : "#/definitions/CheckPINResponseMessage"
+        }
+      },
+      "description" : "Object to encapsulate checkPIN response"
+    },
+    "AddTVODOrderRespMessage" : {
+      "type" : "object",
+      "required" : [ "authorized", "failureMessage", "message", "orderID", "responseCode", "txID" ],
+      "properties" : {
+        "message" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "txID" : {
+          "type" : "string",
+          "description" : "Transaction Id of the Order"
+        },
+        "authorized" : {
+          "type" : "string",
+          "description" : "Price charged for the product"
+        },
+        "orderID" : {
+          "type" : "integer",
+          "format" : "int32",
+          "description" : "Transaction Id of the Order"
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        }
+      },
+      "description" : "Response of the addTVODOrder Api"
+    },
+    "GetActiveSubscriptionRequest" : {
+      "type" : "object",
+      "required" : [ "GetActiveSubscriptionRequestMessage" ],
+      "properties" : {
+        "GetActiveSubscriptionRequestMessage" : {
+          "description" : "Object to encapsulate getActiveSubscriptions request",
+          "$ref" : "#/definitions/GetActiveSubscriptionRequestMessage"
+        }
+      },
+      "description" : "Object to encapsulate getActiveSubscriptions request"
+    },
+    "UpdateProfileResponse" : {
+      "type" : "object",
+      "required" : [ "UpdateProfileResponseMessage" ],
+      "properties" : {
+        "UpdateProfileResponseMessage" : {
+          "description" : "Object to encapsulate updatePin response",
+          "$ref" : "#/definitions/UpdateProfileResponseMessage"
+        }
+      },
+      "description" : "Object to encapsulate updatePin response"
+    },
+    "UpdateParentalControlDetailsRequest" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "newParentalControlPin", "oldParentalControlPin", "parentalControl", "parentalControlLevel", "sessionToken" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "sessionToken" : {
+          "type" : "string",
+          "description" : "A unique token generated for the account on successful authentication."
+        },
+        "newParentalControlPin" : {
+          "type" : "string",
+          "description" : "New parental PIN for the account."
+        },
+        "parentalControl" : {
+          "type" : "boolean",
+          "description" : "To set parental control."
+        },
+        "parentalControlLevel" : {
+          "type" : "string",
+          "description" : "Parental level for the account."
+        },
+        "oldParentalControlPin" : {
+          "type" : "string",
+          "description" : "Old parental PIN for the account.To be provided for the account whose parental controls are already active."
+        }
+      },
+      "description" : "Object to encapsulate updateParentalControlDetails request"
+    },
+    "GetProductsRequestMessage" : {
+      "type" : "object",
+      "required" : [ "apiPassword", "apiUser", "channelPartnerID", "dmaId" ],
+      "properties" : {
+        "channelPartnerID" : {
+          "type" : "string",
+          "description" : "Unique identification number of channel partner"
+        },
+        "apiUser" : {
+          "type" : "string",
+          "description" : "Partner authentication username"
+        },
+        "apiPassword" : {
+          "type" : "string",
+          "description" : "Partner authentication password"
+        },
+        "dmaId" : {
+          "type" : "string",
+          "description" : "Unique Zone-X-ref Id of channel partner"
+        },
+        "returnPromotions" : {
+          "type" : "boolean",
+          "description" : "Returns free trial promotions defined to the product"
+        }
+      },
+      "description" : "Object to encapsulate getProducts  request"
+    },
+    "UpdatePinRespMsg" : {
+      "type" : "object",
+      "required" : [ "failureMessage", "responseCode", "status" ],
+      "properties" : {
+        "status" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        },
+        "message" : {
+          "type" : "string",
+          "description" : "Indicates whether the pin is updated successfully or not."
+        }
+      },
+      "description" : "Response of the updatePin Api"
+    },
+    "AddSubscriptionsResponseMessage" : {
+      "type" : "object",
+      "required" : [ "failureMessage", "message", "orderID", "responseCode", "validityTill" ],
+      "properties" : {
+        "message" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        },
+        "orderID" : {
+          "type" : "string",
+          "description" : "Unique Id of the Order"
+        },
+        "validityTill" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "Validity end date of the subscription"
+        }
+      },
+      "description" : "Response of the addSubscription Api"
+    },
+    "OtherPaymentMethod" : {
+      "type" : "object",
+      "required" : [ "paymentType" ],
+      "properties" : {
+        "paymentType" : {
+          "type" : "string",
+          "description" : "Type of payment method"
+        }
+      },
+      "description" : "Other Payment Methods"
+    },
+    "CheckPINResponseMessage" : {
+      "type" : "object",
+      "required" : [ "failureMessage", "responseCode", "status" ],
+      "properties" : {
+        "status" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        }
+      },
+      "description" : "Response of the checkPIN Api"
+    },
+    "GetActiveSubscriptionResponseMessage" : {
+      "type" : "object",
+      "required" : [ "AccountServiceMessage", "failureMessage", "responseCode", "status" ],
+      "properties" : {
+        "status" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "AccountServiceMessage" : {
+          "type" : "array",
+          "description" : "Service Message",
+          "items" : {
+            "$ref" : "#/definitions/AccountServiceMsg"
+          }
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        }
+      },
+      "description" : "Response of the getActiveSubscriptions Api"
+    },
+    "GetPaymentsResponse" : {
+      "type" : "object",
+      "required" : [ "GetPaymentsResponseMessage" ],
+      "properties" : {
+        "GetPaymentsResponseMessage" : {
+          "description" : "Object to encapsulate getPayments response",
+          "$ref" : "#/definitions/GetPaymentsResponseMessage"
+        }
+      },
+      "description" : "Object to encapsulate getPayments response"
+    },
+    "ChangePasswordRequest" : {
+      "type" : "object",
+      "required" : [ "ChangePasswordRequestMessage" ],
+      "properties" : {
+        "ChangePasswordRequestMessage" : {
+          "description" : "Object to encapsulate changePassword request",
+          "$ref" : "#/definitions/changePasswordRequestMessage"
+        }
+      },
+      "description" : "Object to encapsulate changePassword request"
+    },
+    "UpdatePinRequest" : {
+      "type" : "object",
+      "required" : [ "AddContactRequestMessage" ],
+      "properties" : {
+        "AddContactRequestMessage" : {
+          "description" : "Object to encapsulate updatePin request",
+          "$ref" : "#/definitions/UpdatePinReqstMsg"
+        }
+      },
+      "description" : "Object to encapsulate updatePin request"
+    },
+    "GetVoucherDetailsRequestMessage" : {
+      "type" : "object",
+      "required" : [ "GetVoucherDetailsRequest" ],
+      "properties" : {
+        "GetVoucherDetailsRequest" : {
+          "description" : "Object to encapsulate getVoucherDetails request",
+          "$ref" : "#/definitions/GetVoucherDetailsRequest"
+        }
+      },
+      "description" : "Object to encapsulate getVoucherDetails request"
+    },
+    "ResetPasswordResponse" : {
+      "type" : "object",
+      "required" : [ "ResetPasswordResponseMessage" ],
+      "properties" : {
+        "ResetPasswordResponseMessage" : {
+          "description" : "Object to encapsulate resetPassword response",
+          "$ref" : "#/definitions/ResetPasswordResponseMessage"
+        }
+      },
+      "description" : "Object to encapsulate resetPassword response"
+    },
+    "parameterMesgs" : {
+      "type" : "object",
+      "properties" : {
+        "paramName" : {
+          "type" : "string",
+          "description" : "Name of the locale parameter to be passed for."
+        },
+        "paramValue" : {
+          "type" : "string",
+          "description" : "Value of the locale parameter based on param name provided."
+        }
+      },
+      "description" : "Email template localization parameters information message"
+    },
+    "GetVoucherDetailsResponse" : {
+      "type" : "object",
+      "required" : [ "CouponCodeDetails", "applicablePlans", "failureMessage", "message", "responseCode" ],
+      "properties" : {
+        "message" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        },
+        "CouponCodeDetails" : {
+          "description" : "Coupon code details message",
+          "$ref" : "#/definitions/CouponCodeDetails"
+        },
+        "applicablePlans" : {
+          "type" : "array",
+          "description" : "Applicable Services Information Message",
+          "items" : {
+            "$ref" : "#/definitions/ApplicablePlans"
+          }
+        }
+      },
+      "description" : "Response of the getVoucherDetails Api"
+    },
+    "GetAccountPairedCouponCodesRequestMessage" : {
+      "type" : "object",
+      "required" : [ "GetAccountPairedCouponCodesRequest" ],
+      "properties" : {
+        "GetAccountPairedCouponCodesRequest" : {
+          "description" : "Object to encapsulate getAcctPairedCouponCodes request",
+          "$ref" : "#/definitions/GetAccountPairedCouponCodesRequest"
+        }
+      },
+      "description" : "Object to encapsulate getAcctPairedCouponCodes request"
+    },
+    "UpdateProfileRequest" : {
+      "type" : "object",
+      "required" : [ "UpdateProfileRequestMessage" ],
+      "properties" : {
+        "UpdateProfileRequestMessage" : {
+          "description" : "Object to encapsulate updateProfile request",
+          "$ref" : "#/definitions/UpdateProfileRequestMessage"
+        }
+      },
+      "description" : "Object to encapsulate updateProfile request"
+    },
+    "GetPaymentsRequest" : {
+      "type" : "object",
+      "required" : [ "GetPaymentsRequestMessage" ],
+      "properties" : {
+        "GetPaymentsRequestMessage" : {
+          "description" : "Object to encapsulate getPayments request",
+          "$ref" : "#/definitions/GetPaymentsRequestMessage"
+        }
+      },
+      "description" : "Object to encapsulate getPayments request"
+    },
+    "AccountPairedVoucherCodesResponse" : {
+      "type" : "object",
+      "required" : [ "AccountPairedVoucherCodesResponseMessage" ],
+      "properties" : {
+        "AccountPairedVoucherCodesResponseMessage" : {
+          "description" : "Object to encapsulate pairCustomer response",
+          "$ref" : "#/definitions/AccountPairedVoucherCodesResponseMessage"
+        }
+      },
+      "description" : "Object to encapsulate pairCustomer response"
+    },
+    "Promotions" : {
+      "type" : "object",
+      "required" : [ "amount", "isDefaultPromo", "isFreeTrail", "isVODPromotion", "promoDescrip", "promotionExpiry", "promotionId", "promotionName", "promotionType", "promotionalPrice" ],
+      "properties" : {
+        "promotionId" : {
+          "type" : "string",
+          "description" : "Promotion id to the product. Mandatory if returnPromotions is “T”."
+        },
+        "promotionName" : {
+          "type" : "string",
+          "description" : "Name of the promotion"
+        },
+        "promotionType" : {
+          "type" : "string",
+          "description" : "Type of promotion applied to the product"
+        },
+        "promoDescrip" : {
+          "type" : "string",
+          "description" : "Description to the promotion"
+        },
+        "isVODPromotion" : {
+          "type" : "boolean",
+          "description" : "Defines whether it is VOD promotion or not"
+        },
+        "isFreeTrail" : {
+          "type" : "boolean",
+          "description" : "Defines whether the promotion is free trial or not"
+        },
+        "isDefaultPromo" : {
+          "type" : "boolean",
+          "description" : "This promo is the DefaultPromo or not"
+        },
+        "amount" : {
+          "type" : "number",
+          "description" : "Amount defined for promotion at promotion level.Amount is zero for free promotions."
+        },
+        "promotionalPrice" : {
+          "type" : "number",
+          "description" : "Amount need to be charged after applying the promotion"
+        },
+        "promotionExpiry" : {
+          "type" : "integer",
+          "format" : "int64",
+          "description" : "Expiry date of the promotion"
+        }
+      },
+      "description" : "Promotions"
+    },
+    "RedeemCouponResponseMessage" : {
+      "type" : "object",
+      "required" : [ "failureMessage", "responseCode", "status" ],
+      "properties" : {
+        "status" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        },
+        "message" : {
+          "type" : "string",
+          "description" : "Coupon code applied successfully"
+        }
+      },
+      "description" : "Response of the redeemCoupon Api"
+    },
+    "PaymentMethodInfo" : {
+      "type" : "object",
+      "required" : [ "paramName", "status" ],
+      "properties" : {
+        "status" : {
+          "type" : "boolean",
+          "description" : "Status of the payment method."
+        },
+        "paramName" : {
+          "type" : "boolean",
+          "description" : "Indicates whether the payment method is auto payment or not "
+        },
+        "label" : {
+          "type" : "string",
+          "example" : "App Store Billing",
+          "description" : "Label of the payment method"
+        },
+        "cardInfoMsg" : {
+          "description" : "Payment card details",
+          "$ref" : "#/definitions/CardInfoMsg"
+        },
+        "transactionReferenceMsg" : {
+          "description" : "Transaction Reference Msg Details",
+          "$ref" : "#/definitions/TransactionReferenceMsg"
+        }
+      },
+      "description" : "Payment method details"
+    },
+    "ResetPasswordResponseMessage" : {
+      "type" : "object",
+      "required" : [ "failureMessage", "responseCode", "status" ],
+      "properties" : {
+        "status" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        },
+        "message" : {
+          "type" : "string",
+          "description" : "Indicates whether the password is reset successfully or not."
+        }
+      },
+      "description" : "Response of the resetPassword Api"
+    },
+    "UpdateParentalControlDetailsResponseMessage" : {
+      "type" : "object",
+      "required" : [ "UpdateParentalControlDetailsResponse" ],
+      "properties" : {
+        "UpdateParentalControlDetailsResponse" : {
+          "description" : "Object to encapsulate updateParentalControlDetails response",
+          "$ref" : "#/definitions/UpdateParentalControlDetailsResponse"
+        }
+      },
+      "description" : "Object to encapsulate updateParentalControlDetails response"
+    },
+    "GetAccountDevicesResponseMessage" : {
+      "type" : "object",
+      "required" : [ "AccountDeviceDetails", "failureMessage", "responseCode", "status" ],
+      "properties" : {
+        "status" : {
+          "type" : "string"
+        },
+        "responseCode" : {
+          "type" : "integer",
+          "format" : "int32"
+        },
+        "AccountDeviceDetails" : {
+          "type" : "array",
+          "description" : "Account device response details message",
+          "items" : {
+            "$ref" : "#/definitions/AccountDeviceDetails"
+          }
+        },
+        "failureMessage" : {
+          "$ref" : "#/definitions/FailureMessage"
+        }
+      },
+      "description" : "Response of the getAccountDevices Api"
+    },
+    "ServicesMsg" : {
+      "type" : "object",
+      "required" : [ "services" ],
+      "properties" : {
+        "services" : {
+          "type" : "array",
+          "description" : "Array of Service informationt",
+          "items" : {
+            "$ref" : "#/definitions/ServicesInfo"
+          }
+        }
+      },
+      "description" : "Array of services message details"
+    }
+  },
+  "externalDocs" : {
+    "description" : "Core Docs",
+    "url" : "http://acme.com/docs2"
+  }
+}
